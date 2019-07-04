@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en-US" class="no-wp-admin">
+
+<!-- Mirrored from chriskrycho.com/web/two-absurd-anti-patterns/?replytocom=1566 by HTTrack Website Copier/3.x [XR&CO'2013], Wed, 01 Jan 2014 03:23:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+   <title>
+      Two (absurd) anti-patterns &raquo; Designgineering &raquo; Chris Krycho   </title>
+
+   <!-- Set document meta -->
+   <meta charset="UTF-8" />
+
+   <!-- Mobile devices should view the screen at their native width -->
+   <meta name='viewport' content='width=device-width,initial-scale=1.0' />
+
+   <!-- Styles -->
+   <link rel="stylesheet" type="text/css" media="screen" href="../wp-content/themes/ck-web/style.css" />
+   <link rel="stylesheet" type="text/css" media="screen" href="../../utilities/tooltip/jquery.tooltip.css"
+
+   <!-- Authorship -->
+   <link rel="author" href="https://plus.google.com/u/0/100517719789069874571/" />
+   
+   <!-- All Javascript (including JQuery) functionality -->
+   <script type="text/javascript" src="http://use.typekit.com/aqh6miw.js"></script>
+
+   <!-- jQuery -->
+   <script type="text/javascript" src="../../utilities/jquery.min.js"></script>
+   <script type="text/javascript" src="../../utilities/tooltip/jquery.tooltip.min.js"></script>
+   <script type="text/javascript" src="../../utilities/custom-functions.js"></script>
+
+   <!-- IE Fixes -->
+   <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <link rel="stylesheet" type="text/css" media="screen" href="/styles/ie.css" />
+   <![endif]-->
+   
+   
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.22 - http://yoast.com/wordpress/seo/ -->
+<meta name="description" content="A pair of anti-patterns I&#039;ve run into recently in my software development work, both of which are absolutely awful, though in completely different ways."/>
+<link rel="canonical" href="index.html" />
+<link rel="author" href="https://plus.google.com/100517719789069874571/"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@chriskrycho"/>
+<meta name="twitter:domain" content="Designgineering"/>
+<meta name="twitter:creator" content="@chriskrycho"/>
+<meta name="twitter:description" content="A pair of anti-patterns I&#039;ve run into recently in my software development work, both of which are absolutely awful, though in completely different ways."/>
+<meta name="twitter:title" content="Two (absurd) anti-patterns - Designgineering"/>
+<meta name="twitter:url" content="http://chriskrycho.com/web/two-absurd-anti-patterns/"/>
+<!-- / Yoast WordPress SEO plugin. -->
+
+
+            <script type="text/javascript">//<![CDATA[
+            // Google Analytics for WordPress by Yoast v4.3.3 | http://yoast.com/wordpress/google-analytics/
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-10702079-9']);
+				            _gaq.push(['_setCustomVar',1,'tags','development dry maintenance programming worst-practices',3],['_setCustomVar',2,'year','2013',3],['_setCustomVar',3,'category','posts',3],['_trackPageview']);
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+            //]]></script>
+			<link rel="alternate" type="application/rss+xml" title="Designgineering &raquo; Two (absurd) anti-patterns Comments Feed" href="feed/index.html" />
+<link rel='stylesheet' id='wp-syntax-css-css'  href='../wp-content/plugins/wp-syntax/css/wp-syntax5152.css?ver=1.0' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-includes/js/comment-reply.mincaf6.js?ver=3.9-alpha'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery3e5a.js?ver=1.10.2'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min1576.js?ver=1.2.1'></script>
+<meta name="generator" content="WordPress 3.9-alpha" />
+<script type="text/javascript" src="../wp-content/plugins/wp-syntax-effects/js/wp-syntax-effects.js"></script>
+</head>
+<body>
+<div id="decorative-wrapper">
+
+
+   <!--[if lt IE 9]>
+   <div id="nav-wrapper">
+   <![endif]-->
+   
+   <nav id="site-nav" class="menu-main-nav-container"><ul id="menu-main-nav" class="menu"><li id="menu-item-12" class="level-1 menu-item menu-item-type-post_type menu-item-object-page menu-item-12"><a href="../work/index.html" >Work</a></li>
+<li id="menu-item-219" class="level-1 menu-item menu-item-type-post_type menu-item-object-page menu-item-219"><a href="../tools/index.html" >Tools</a></li>
+<li id="menu-item-858" class="level-1 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-858"><a href="../projects/index.html" >Projects</a></li>
+<li id="menu-item-11" class="level-1 hide menu-item menu-item-type-post_type menu-item-object-page menu-item-11"><a href="../process/index.html" >Process</a></li>
+<li id="menu-item-10" class="level-1 menu-item menu-item-type-post_type menu-item-object-page menu-item-10"><a href="../web-professionals/index.html" >Web Professionals</a></li>
+</ul></nav>   
+   <!--[if lt IE 9]>
+   </div>
+   <![endif]-->
+
+   <header id="site-header">
+      <h1><a href="../index.html">Designgineering</a></h1>
+      <h2><span class="italic">web design &amp; development <span class="break">by <a href='../../index.html'>Chris Krycho</a></span></span></h2>
+   </header>
+   
+         
+               <article>
+
+            <header>
+               <h1>
+                  Two (absurd) anti-patterns               </h1>
+            </header>
+
+                        <div class="content-meta">
+
+                              <p class="pubdate">Published: <a href="index.html" class="permalink">February 12, 2013</a></p>
+
+                              <p class="comments">Comments: <a href="index.html#comments" class="permalink">5</a></p>
+
+                              <p class="categories">Filed under: <a href="../posts/index.html" title="View all posts in Posts" rel="category tag">Posts</a></p>
+
+                              <p class="tags">Topics: <a href="../topics/development/index.html" rel="tag">development</a>, <a href="../topics/dry/index.html" rel="tag">DRY</a>, <a href="../topics/maintenance/index.html" rel="tag">maintenance</a>, <a href="../topics/programming/index.html" rel="tag">programming</a>, <a href="../topics/worst-practices/index.html" rel="tag">worst practices</a></p>
+                           </div>
+            
+                        <div class="content hyphenate">
+
+               <p>A pair of anti-patterns I&#8217;ve run into recently in my software development work, both of which are absolutely <em>awful</em>, though in completely different (and quite distinct) ways. I thought I&#8217;d share <em>The Empty If</em> and <em>Wash, Rinse, Repeat</em>, just so the world can share a bit of my pain. <span id="more-982"></span></p>
+<h3>The Empty &#8220;if&#8221;</h3>
+<p>This is the smaller and more trivial of the two, but I see it <em>frequently</em> in certain parts of the code base I&#8217;m working on.</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="c" style="font-family:monospace;"><span style="color: #b1b100;">if</span> <span style="color: #009900;">&#40;</span>someVar <span style="color: #339933;">==</span> <span style="color: #0000dd;">0</span> <span style="color: #339933;">&amp;&amp;</span> someOtherVar <span style="color: #339933;">==</span> <span style="color: #0000dd;">0</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+    <span style="color: #666666; font-style: italic;">// do nothing</span>
+<span style="color: #009900;">&#125;</span> <span style="color: #b1b100;">else</span> <span style="color: #009900;">&#123;</span>
+    someFunction<span style="color: #009900;">&#40;</span>someVar<span style="color: #339933;">,</span> someOtherVar<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #666666; font-style: italic;">// ... lots of other things</span>
+<span style="color: #009900;">&#125;</span></pre></td></tr></table></div>
+
+<p>Of course, as anyone who&#8217;s spent any time thinking about this can see, there&#8217;s a <em>much</em> more elegant solution:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="c" style="font-family:monospace;"><span style="color: #b1b100;">if</span> <span style="color: #009900;">&#40;</span>someVar <span style="color: #339933;">!=</span> <span style="color: #0000dd;">0</span> <span style="color: #339933;">||</span> someOtherVar <span style="color: #339933;">!=</span> <span style="color: #0000dd;">0</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+    someFunction<span style="color: #009900;">&#40;</span>someVar<span style="color: #339933;">,</span> someOtherVar<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #666666; font-style: italic;">// ... lots of other things</span>
+<span style="color: #009900;">&#125;</span></pre></td></tr></table></div>
+
+<p>In fact, you can even go a step further! Without losing a hint of clarity, you can write it like this:<a href="#fn1" name="fnref1" class="footnoteRef"><sup>1</sup></a></p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="c" style="font-family:monospace;"><span style="color: #b1b100;">if</span> <span style="color: #009900;">&#40;</span>someVar <span style="color: #339933;">||</span> someOtherVar<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+    someFunction<span style="color: #009900;">&#40;</span>someVar<span style="color: #339933;">,</span> someOtherVar<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #666666; font-style: italic;">// ... lots of other things</span>
+<span style="color: #009900;">&#125;</span></pre></td></tr></table></div>
+
+<p>Why this pattern is so common, I have <em>no</em> idea. But common it is.</p>
+<p>The takeaway: think about your logic setup so you don&#8217;t end up with empty blocks. Gladly, most compilers these days (and any I&#8217;m using!) are smart enough that those things usually get optimized away. As I&#8217;ve <a href="../good-programming-in-3-simple-rules/index.html" title="Good Programming in 3 Simple Rules">said before</a>, program for people, not computers.</p>
+<h3>Wash, Rinse, Repeat</h3>
+<p>I was working on one set of related programs recently, each of which performs a similar task. Most of the code hasn&#8217;t been touched in quite some time&#8212;anywhere from a year to, in a few cases, a decade or more&#8212;so it needed to be rebuilt with our current toolchain. I took the opportunity to clean up the code a little&#8212;no functional changes, but running an auto-formatter over it to match current code style, and then cleaning up deprecated code that had been commented out, etc.</p>
+<p>As I worked through this set of about a dozen executables, I soon discovered that they had been constructed as follows:</p>
+<ol class="tight">
+<li>Find a program that does something similar to what we want to do with this program.</li>
+<li>Copy the contents of that program over in a new source file wholesale.</li>
+<li>Make a couple changes so that it reads and writes different files on the file system and accounts for some small differences in the formatting of those files.</li>
+<li>Build.</li>
+<li>Release.</li>
+</ol>
+<p>Note that, across these dozen or so programs, each of which was approximately 250&#8211;300 lines long when I was done cleaning it up, at least fully <em>one half</em> of the code was duplicated. As a result, there are roughly 1400 lines of extra code to maintain, that could all be extracted into a common module&#8212;probably in a library&#8212;that all of these other pieces could link against. Indeed, where possible in other parts of this software package, I&#8217;ve made precisely that move.</p>
+<p>The takeaway here is fairly simple. <em>Don&#8217;t use copy and paste.</em> (I&#8217;ve said this <a href="../good-programming-in-3-simple-rules/index.html" title="Good Programming in 3 Simple Rules">before</a>, too.) If, as a programmer, you find yourself using copy and paste, you should take a step back and reevaluate your approach; there is almost certainly a better&#8212;as in, more maintainable, less work for everyone in the medium and certainly in the long term&#8212;way of doing whatever it is you&#8217;re doing. Extract common behavior into common functions. <em>Don&#8217;t repeat yourself.</em></p>
+<hr/>
+<section class="footnotes">
+<ol>
+<li id="fn1">Thanks to <a href="https://twitter.com/calcnerd256" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://twitter.com']);">Montana Rowe</a> for <a href="https://twitter.com/calcnerd256/status/301343884892594176" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://twitter.com']);">flagging</a> a silly mistake I&#8217;d made here. <a href="#fnref1">↩</a></li>
+</ol>
+</section>
+
+            </div>
+
+                           <footer id="comments">
+                  <h3 class="discussion-header">Discussion</h3>
+                  <ul class="comments-ul">
+
+   <li class="comment-li" id="comment-li-1562">
+      <article class="comment" id="comment-1562">
+         <div class="comment-avatar">
+            <img alt='' src='http://0.gravatar.com/avatar/2d6c7833aaa3f77f2de2dcc1ae757c1a?s=82&amp;d=identicon&amp;r=G' class='avatar avatar-82 photo' height='82' width='82' />         </div>
+         <div class="comment-meta">
+            <p>
+                              <span><a href="http://www.krycho.net/" class="comment-author-link">David</a> thought to say:</span>
+                              <span class="comment-date">
+                  <a href="index.html#comment-1562" class="comment-permalink' title='comment permalink">
+                     1:45pm on 2/12/2013                  </a>
+               </span>
+            </p>
+         </div>
+<p>Your final example shown below only works in a language like C/C++ where the language interprets someVar/someOtherVar being zero as false:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="c" style="font-family:monospace;"><span style="color: #b1b100;">if</span> <span style="color: #009900;">&#40;</span>someVar <span style="color: #339933;">||</span> someOtherVar<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+    someFunction<span style="color: #009900;">&#40;</span>someVar<span style="color: #339933;">,</span> someOtherVar<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #666666; font-style: italic;">// ... lots of other things</span>
+<span style="color: #009900;">&#125;</span></pre></td></tr></table></div>
+
+<p>Meaning in a language like java, that is not a valid evaluation with int type, so you would have to use your example which is more explicit and in some ways more readable for clarity:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="java" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">if</span> <span style="color: #009900;">&#40;</span>someVar <span style="color: #339933;">!=</span> <span style="color: #cc66cc;">0</span> <span style="color: #339933;">||</span> someOtherVar <span style="color: #339933;">!=</span> <span style="color: #cc66cc;">0</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+    someFunction<span style="color: #009900;">&#40;</span>someVar, someOtherVar<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #666666; font-style: italic;">// ... lots of other things</span>
+<span style="color: #009900;">&#125;</span></pre></td></tr></table></div>
+
+<p> <img src="../wp-includes/images/smilies/icon_biggrin.gif" alt=":-D" class="wp-smiley" /> </p>
+<a class='comment-reply-link' href='index841a.html?replytocom=1562#respond' onclick='return addComment.moveForm("comment-1562", "1562", "respond", "982")'>Offer a rejoinder&darr;</a>      </article>
+
+<ul class="children">
+   <li class="comment-li" id="comment-li-1563">
+      <article class="comment" id="comment-1563">
+         <div class="comment-avatar">
+            <img alt='' src='http://0.gravatar.com/avatar/c096ed07142659408dc6651f8320acd3?s=82&amp;d=identicon&amp;r=G' class='avatar avatar-82 photo' height='82' width='82' />         </div>
+         <div class="comment-meta">
+            <p>
+                              <span><a href="../../index.html" class="comment-author-link">Chris Krycho</a> thought to say:</span>
+                              <span class="comment-date">
+                  <a href="index.html#comment-1563" class="comment-permalink' title='comment permalink">
+                     1:48pm on 2/12/2013                  </a>
+               </span>
+            </p>
+         </div>
+<p>That&#8217;s true. However, for my purposes (that is: all the language I&#8217;m working in, e.g. C, C++, Javascript, PHP, and Python) it does the trick. It&#8217;s particularly Pythonic:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="python" style="font-family:monospace;"><span style="color: #ff7700;font-weight:bold;">if</span> someVar <span style="color: #ff7700;font-weight:bold;">or</span> someOtherVar:
+    someFunction<span style="color: black;">&#40;</span>someVar<span style="color: #66cc66;">,</span> someOtherVar<span style="color: black;">&#41;</span>
+    <span style="color: #808080; font-style: italic;"># ... lots of other things</span></pre></td></tr></table></div>
+
+<a class='comment-reply-link' href='index6d64.html?replytocom=1563#respond' onclick='return addComment.moveForm("comment-1563", "1563", "respond", "982")'>Offer a rejoinder&darr;</a>      </article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment-li" id="comment-li-1564">
+      <article class="comment" id="comment-1564">
+         <div class="comment-avatar">
+            <img alt='' src='http://0.gravatar.com/avatar/c839c4eca7cf8fb945574fd5d864bf8a?s=82&amp;d=identicon&amp;r=G' class='avatar avatar-82 photo' height='82' width='82' />         </div>
+         <div class="comment-meta">
+            <p>
+                              <span>Eric Dorbin thought to say:</span>
+                              <span class="comment-date">
+                  <a href="index.html#comment-1564" class="comment-permalink' title='comment permalink">
+                     3:07pm on 2/12/2013                  </a>
+               </span>
+            </p>
+         </div>
+<p>I&#8217;m not really a programmer, but I know enough programming to feel your pain. I&#8217;m a little suprised you see this so much in professional code, these are rookie methods that should be eliminated from one&#8217;s repertoire once a better way is learned. Personally, I always got a giddy feeling whenever I found a way to simplify/condense/streamline things like you did here.</p>
+<a class='comment-reply-link' href='index7a86.html?replytocom=1564#respond' onclick='return addComment.moveForm("comment-1564", "1564", "respond", "982")'>Offer a rejoinder&darr;</a>      </article>
+
+<ul class="children">
+   <li class="comment-li" id="comment-li-1565">
+      <article class="comment" id="comment-1565">
+         <div class="comment-avatar">
+            <img alt='' src='http://0.gravatar.com/avatar/c096ed07142659408dc6651f8320acd3?s=82&amp;d=identicon&amp;r=G' class='avatar avatar-82 photo' height='82' width='82' />         </div>
+         <div class="comment-meta">
+            <p>
+                              <span><a href="../../index.html" class="comment-author-link">Chris Krycho</a> thought to say:</span>
+                              <span class="comment-date">
+                  <a href="index.html#comment-1565" class="comment-permalink' title='comment permalink">
+                     3:08pm on 2/12/2013                  </a>
+               </span>
+            </p>
+         </div>
+<p>Well, you see, that&#8217;s the problem, actually: my predecessor was, erm, distinctly <em>not</em> a professional programmer (though he did it for a long time, he never wanted to learn how to do it well&#8230; so he never did it well). And it&#8217;s painful. I get the same satisfaction, but it starts to grate after the 300th time.</p>
+<a class='comment-reply-link' href='index83da.html?replytocom=1565#respond' onclick='return addComment.moveForm("comment-1565", "1565", "respond", "982")'>Offer a rejoinder&darr;</a>      </article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment-li" id="comment-li-1566">
+      <article class="comment" id="comment-1566">
+         <div class="comment-avatar">
+            <img alt='' src='http://0.gravatar.com/avatar/c839c4eca7cf8fb945574fd5d864bf8a?s=82&amp;d=identicon&amp;r=G' class='avatar avatar-82 photo' height='82' width='82' />         </div>
+         <div class="comment-meta">
+            <p>
+                              <span>Eric Dorbin thought to say:</span>
+                              <span class="comment-date">
+                  <a href="index.html#comment-1566" class="comment-permalink' title='comment permalink">
+                     3:44pm on 2/12/2013                  </a>
+               </span>
+            </p>
+         </div>
+<p>Ah, yes, I suppose not everyone possesses the passion for learning and for doing things excellently. I totally understand how that would be frustrating for you too. When I talk of feeling giddy, I mean more when I was writing my own code and found ways of doing it better. Compensating for the same mistake of someone else many times can certainly become tedious.</p>
+<a class='comment-reply-link' href='index4a6c.html?replytocom=1566#respond' onclick='return addComment.moveForm("comment-1566", "1566", "respond", "982")'>Offer a rejoinder&darr;</a>      </article>
+
+</li><!-- #comment-## -->
+
+                  </ul> <!-- comments-ul -->
+                  <div id="respond">
+								<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title"><h2>Your rejoinder to <a href="#comment-1566">Eric Dorbin</a></h2> <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond">Opt for silence instead&uarr;</a></small></h3>
+									<form action="http://chriskrycho.com/web/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="require-contact-info">Anonymity is <em>most</em> unhelpful. Please identify yourself!</p><p class="email-anonymity">(Your email will not be published.)</p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>												<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Fire away!" />
+							<input type='hidden' name='comment_post_ID' value='982' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='1566' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="57f15b6619" /></p><!-- BEGIN: subscribe to comments reloaded --><p><label for='subscribe-reloaded'><input style='width:30px' type='checkbox' name='subscribe-reloaded' id='subscribe-reloaded' value='yes' /> Notify me of followup comments via e-mail. You can also <a href='../comment-subscriptions/index977a.html?srp=982&amp;sra=s'>subscribe</a> without commenting.</label></p><!-- END: subscribe to comments reloaded -->					</form>
+							</div><!-- #respond -->
+			        <script type="text/javascript">
+            jQuery(document).ready(function () {
+                jQuery('#commentform').submit(function () {
+                    _gaq.push(
+                            ['_setAccount', 'UA-10702079-9'],
+                            ['_trackEvent', 'comment', 'submit']
+                    );
+                });
+            });
+        </script>
+		<p class="allowed-text">You may use <a href="https://help.github.com/articles/github-flavored-markdown" target="_blank">GitHub-flavored Markdown</a> and/or these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:<br/><code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>                  </div>
+               </footer>
+
+         </article>            <nav id="page-nav">
+         <ul>
+            <li class="newer">
+               <a href="../four-more-anti-patterns/index.html" rel="next">&larr; back to the future</a>            </li>
+            <li class="home"><a href="../index.html">&ndash;Home&ndash;</a></li>
+            <li class="older">
+               <a href="../bitbucket/index.html" rel="prev">into the past &rarr;</a>            </li>
+         </ul>
+      </nav>
+         </div>      <footer id="site-footer">
+
+            <nav id="supersite-nav" class="footer-block">
+         <h1>Navigate</h1>
+         <ul>
+            <li>
+               <h2>Search this site:</h2>
+               
+<form role="search" class="customform" method="get" action="http://chriskrycho.com/web/">
+   <input type="text" value="" name="search" id="search" placeholder="discover something"/>
+   <input type="submit" id="searchsubmit" value="&rarr;" />
+</form>            </li>
+            <li>
+               <a href="../../index.html">Home</a><br/>
+               <i>Creativity, reflection, & passionate endeavors.</i>
+            </li>
+            <li>
+               <a href="../index.html">Designgineering</a><br/>
+               <i>Web design & development.</i>
+            </li>
+            <li>
+               <a href="../../theology/index.html">Ardent Fidelity</a><br/>
+               <i>Reflections on a Christ-centered life.</i>
+            </li>
+            <li>
+               <a href="../../art/index.html">Ars Artis</a><br/>
+               <i>Creations & musings on creativity.</i>
+            </li>
+            <li>
+               <a href="../../family/index.html">From the Hearth</a><br/>
+               <i>Updates on our growing family.</i>
+            </li>
+         </ul>
+      </nav>
+
+      <section id="connect" class="footer-block">
+         <h1>Connect</h1>
+         <ul>
+            <li><h2>Opt for emails:</h2>			<div class="textwidget"><form class="customform" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=chriskrycho/web', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+<input type="text" name="email" placeholder="your.name@domain.com"/>
+<input type="hidden" value="chriskrycho/web" name="uri"/>
+<input type="hidden" name="loc" value="en_US"/>
+<input type="submit" value="&rarr;" />
+</form></div>
+		</li>            <li>
+               <a href="../feed/index.html" title="RSS feed" target="_blank">RSS/Atom</a><br/>
+               <i>To the feed reader, quick!</i>
+            </li>
+            <li>
+               <a href='https://alpha.app.net/chriskrycho' rel='me' data-type='follow' data-user-id='@chriskrycho' title="app.net/chriskrycho">App.net</a><br/>
+               <i>Less noisy, more characters.</i>
+            </li>
+            <li>
+               <a href="#" class="email-link" title="chris|@|chriskrycho|.|com" target="_blank">Email</a><br/>
+               <i>Send me a letter. But without the paper.</i>
+            </li>
+            <li>
+               <a href="http://www.facebook.com/chriskrycho" title="facebook.com/chriskrycho" target="_blank">Facebook</a><br/>
+               <i>Fun party meets family get-together.</i>
+            </li>
+            <li>
+               <a href="https://plus.google.com/100517719789069874571/" title="Google+ profile" target="_blank">Google+</a><br/>
+               <i>The nerdy new kid on the block.</i>
+            </li>
+            <li>
+               <a href="http://www.goodreads.com/user/show/3165223-chris-krycho" title="Goodreads profile" target="_blank">Goodreads</a><br/>
+               <i>A bookshelf, in cyberspace!</i>
+            </li>
+            <li>
+               <a href="http://www.linkedin.com/in/chriskrycho" title="LinkedIn Profile" target="_blank">LinkedIn</a><br/>
+               <i>A place for professional professionals.</i>
+            </li>
+            <li>
+               <a href="http://nosegue.tumblr.com/">No Segue</a><br/>
+               <i>A Tumblr about technology</i>
+            </li>
+            <li>
+               <a href="http://www.twitter.com/chriskrycho" title="twitter.com/chriskrycho" target="_blank">Twitter</a><br/>
+               <i>Your spastic journalist neighbors.</i>
+            </li>
+            <li>
+               <a href="http://about.me/chriskrycho" title="About.me profile" target="_blank">About.me</a><br/>
+               <i>Biographical sundries & links galore!</i>
+            </li>
+            <li>
+               <a href="http://www.runningahead.com/logs/2667b469aeda433382cbcc8ed413d964/profile" target="_blank">RunningAhead</a><br/>
+               <i>I run and run and run some more.</i>
+            </li>
+         </ul>
+      </section>
+
+      <section id="read" class="footer-block">
+         <h1>Read</h1>
+         <div class="eg-archives-columns"><ul>	<li><a href='../2013/12/index.html'>December 2013</a></li>
+	<li><a href='../2013/10/index.html'>October 2013</a></li>
+	<li><a href='../2013/09/index.html'>September 2013</a></li>
+	<li><a href='../2013/08/index.html'>August 2013</a></li>
+	<li><a href='../2013/06/index.html'>June 2013</a></li>
+	<li><a href='../2013/05/index.html'>May 2013</a></li>
+	<li><a href='../2013/03/index.html'>March 2013</a></li>
+	<li><a href='../2013/02/index.html'>February 2013</a></li>
+	<li><a href='../2013/01/index.html'>January 2013</a></li>
+	<li><a href='../2012/12/index.html'>December 2012</a></li>
+	<li><a href='../2012/11/index.html'>November 2012</a></li>
+</ul><ul>
+	<li><a href='../2012/10/index.html'>October 2012</a></li>
+	<li><a href='../2012/09/index.html'>September 2012</a></li>
+	<li><a href='../2012/08/index.html'>August 2012</a></li>
+	<li><a href='../2012/07/index.html'>July 2012</a></li>
+	<li><a href='../2012/06/index.html'>June 2012</a></li>
+	<li><a href='../2012/05/index.html'>May 2012</a></li>
+	<li><a href='../2012/04/index.html'>April 2012</a></li>
+	<li><a href='../2012/03/index.html'>March 2012</a></li>
+	<li><a href='../2012/02/index.html'>February 2012</a></li>
+	<li><a href='../2012/01/index.html'>January 2012</a></li></ul></div>      </section>
+
+      <section id="discuss" class="footer-block">
+         <h1>Discuss</h1>
+         <h2></h2><ul><li><a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html#comment-16469">Josh, another bit of follow-up. As noted in my prev...</a> &ndash; Chris Krycho <i>on <a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html">Python—homebrew, virtualenv, and OS X Framework builds</a></i></li><li><a href="../modular-scales-fantastic-but-dont-overdo-it/index.html#comment-15318">z6305
+
+c17217
+
+R10941
+</a> &ndash; VedqueltWeree <i>on <a href="../modular-scales-fantastic-but-dont-overdo-it/index.html">Modular scales: fantastic, but don't overdo it</a></i></li><li><a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html#comment-15073">My pleasure. However, fair warning: I just discover...</a> &ndash; Chris Krycho <i>on <a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html">Python—homebrew, virtualenv, and OS X Framework builds</a></i></li><li><a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html#comment-14916">Thank you.  This was a source of much frustration.
+...</a> &ndash; Josh Baylin <i>on <a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html">Python—homebrew, virtualenv, and OS X Framework builds</a></i></li><li><a href="../jira-confluence-intranets-and-windows-firewall/index.html#comment-11602">Thank you so much for this awesome post! I've been ...</a> &ndash; Henrik Olsen <i>on <a href="../jira-confluence-intranets-and-windows-firewall/index.html">JIRA, Confluence, Intranets and Windows Firewall</a></i></li></ul>      </section>
+
+      <section id="colophon" class="colophon footer-block">
+         <h1>Colophon</h1>
+         <p>
+            &copy;2012&ndash;2014 Chris Krycho         </p>
+               </section>
+   </footer>
+   <!-- MathJax Latex Plugin installed: Disabled as no shortcodes on this page --><script src="http://bible.logos.com/jsapi/Referencetagging.js" type="text/javascript"></script>
+<script type="text/javascript">
+			Logos.ReferenceTagging.lbsBibleVersion = "";
+			Logos.ReferenceTagging.lbsLibronixBibleVersion = "";
+									Logos.ReferenceTagging.lbsLibronixLinkIcon = "";
+			Logos.ReferenceTagging.lbsNoSearchClassNames = [ "commentlist" ];			Logos.ReferenceTagging.lbsUseTooltip = false;			Logos.ReferenceTagging.lbsNoSearchTagNames = [  ];
+															Logos.ReferenceTagging.tag();
+		</script>
+   <script src='https://d2zh9g63fcvyrq.cloudfront.net/adn.js'></script>
+</body>
+
+<!-- Mirrored from chriskrycho.com/web/two-absurd-anti-patterns/?replytocom=1566 by HTTrack Website Copier/3.x [XR&CO'2013], Wed, 01 Jan 2014 03:23:51 GMT -->
+</html>

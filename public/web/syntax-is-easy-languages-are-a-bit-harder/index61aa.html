@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en-US" class="no-wp-admin">
+
+<!-- Mirrored from chriskrycho.com/web/syntax-is-easy-languages-are-a-bit-harder/?replytocom=35 by HTTrack Website Copier/3.x [XR&CO'2013], Wed, 01 Jan 2014 03:23:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+   <title>
+      Syntax is easy. Languages are a bit harder&#8230; &raquo; Designgineering &raquo; Chris Krycho   </title>
+
+   <!-- Set document meta -->
+   <meta charset="UTF-8" />
+
+   <!-- Mobile devices should view the screen at their native width -->
+   <meta name='viewport' content='width=device-width,initial-scale=1.0' />
+
+   <!-- Styles -->
+   <link rel="stylesheet" type="text/css" media="screen" href="../wp-content/themes/ck-web/style.css" />
+   <link rel="stylesheet" type="text/css" media="screen" href="../../utilities/tooltip/jquery.tooltip.css"
+
+   <!-- Authorship -->
+   <link rel="author" href="https://plus.google.com/u/0/100517719789069874571/" />
+   
+   <!-- All Javascript (including JQuery) functionality -->
+   <script type="text/javascript" src="http://use.typekit.com/aqh6miw.js"></script>
+
+   <!-- jQuery -->
+   <script type="text/javascript" src="../../utilities/jquery.min.js"></script>
+   <script type="text/javascript" src="../../utilities/tooltip/jquery.tooltip.min.js"></script>
+   <script type="text/javascript" src="../../utilities/custom-functions.js"></script>
+
+   <!-- IE Fixes -->
+   <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <link rel="stylesheet" type="text/css" media="screen" href="/styles/ie.css" />
+   <![endif]-->
+   
+   
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.22 - http://yoast.com/wordpress/seo/ -->
+<link rel="canonical" href="index.html" />
+<link rel="author" href="https://plus.google.com/100517719789069874571/"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@chriskrycho"/>
+<meta name="twitter:domain" content="Designgineering"/>
+<meta name="twitter:creator" content="@chriskrycho"/>
+<meta name="twitter:description" content="(A note to would-be designers and developers, and to myself.) You don&#8217;t really know a language till you know the library and the tools. Syntax is easy. Look: any trained C/C++/Java developer can pick up the syntax of Javascript or PHP in no time flat. They&#8217;re just not that different; the hardest adjustments are to [&hellip;]"/>
+<meta name="twitter:title" content="Syntax is easy. Languages are a bit harder... - Designgineering"/>
+<meta name="twitter:url" content="http://chriskrycho.com/web/syntax-is-easy-languages-are-a-bit-harder/"/>
+<!-- / Yoast WordPress SEO plugin. -->
+
+
+            <script type="text/javascript">//<![CDATA[
+            // Google Analytics for WordPress by Yoast v4.3.3 | http://yoast.com/wordpress/google-analytics/
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-10702079-9']);
+				            _gaq.push(['_setCustomVar',1,'tags','development engineering hard-work languages programming web-',3],['_setCustomVar',2,'year','2012',3],['_setCustomVar',3,'category','posts',3],['_trackPageview']);
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+            //]]></script>
+			<link rel="alternate" type="application/rss+xml" title="Designgineering &raquo; Syntax is easy. Languages are a bit harder&#8230; Comments Feed" href="feed/index.html" />
+<link rel='stylesheet' id='wp-syntax-css-css'  href='../wp-content/plugins/wp-syntax/css/wp-syntax5152.css?ver=1.0' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-includes/js/comment-reply.mincaf6.js?ver=3.9-alpha'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery3e5a.js?ver=1.10.2'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min1576.js?ver=1.2.1'></script>
+<meta name="generator" content="WordPress 3.9-alpha" />
+<script type="text/javascript" src="../wp-content/plugins/wp-syntax-effects/js/wp-syntax-effects.js"></script>
+</head>
+<body>
+<div id="decorative-wrapper">
+
+
+   <!--[if lt IE 9]>
+   <div id="nav-wrapper">
+   <![endif]-->
+   
+   <nav id="site-nav" class="menu-main-nav-container"><ul id="menu-main-nav" class="menu"><li id="menu-item-12" class="level-1 menu-item menu-item-type-post_type menu-item-object-page menu-item-12"><a href="../work/index.html" >Work</a></li>
+<li id="menu-item-219" class="level-1 menu-item menu-item-type-post_type menu-item-object-page menu-item-219"><a href="../tools/index.html" >Tools</a></li>
+<li id="menu-item-858" class="level-1 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-858"><a href="../projects/index.html" >Projects</a></li>
+<li id="menu-item-11" class="level-1 hide menu-item menu-item-type-post_type menu-item-object-page menu-item-11"><a href="../process/index.html" >Process</a></li>
+<li id="menu-item-10" class="level-1 menu-item menu-item-type-post_type menu-item-object-page menu-item-10"><a href="../web-professionals/index.html" >Web Professionals</a></li>
+</ul></nav>   
+   <!--[if lt IE 9]>
+   </div>
+   <![endif]-->
+
+   <header id="site-header">
+      <h1><a href="../index.html">Designgineering</a></h1>
+      <h2><span class="italic">web design &amp; development <span class="break">by <a href='../../index.html'>Chris Krycho</a></span></span></h2>
+   </header>
+   
+         
+               <article>
+
+            <header>
+               <h1>
+                  Syntax is easy. Languages are a bit harder&#8230;               </h1>
+            </header>
+
+                        <div class="content-meta">
+
+                              <p class="pubdate">Published: <a href="index.html" class="permalink">January 31, 2012</a></p>
+
+                              <p class="comments">Comments: <a href="index.html#comments" class="permalink">6</a></p>
+
+                              <p class="categories">Filed under: <a href="../posts/index.html" title="View all posts in Posts" rel="category tag">Posts</a></p>
+
+                              <p class="tags">Topics: <a href="../topics/development/index.html" rel="tag">development</a>, <a href="../topics/engineering/index.html" rel="tag">engineering</a>, <a href="../topics/hard-work/index.html" rel="tag">hard work</a>, <a href="../topics/languages/index.html" rel="tag">languages</a>, <a href="../topics/programming/index.html" rel="tag">programming</a>, <a href="../topics/web-applications/index.html" rel="tag">web applications</a></p>
+                           </div>
+            
+                        <div class="content hyphenate">
+
+               <p class="editorial">(A note to would-be designers and developers, and to myself.)</p>
+<p>You don&#8217;t really know a language till you know the library and the tools. Syntax is easy.</p>
+<p><span id="more-174"></span>Look: any trained C/C++/Java developer can pick up the syntax of Javascript or PHP in no time flat. They&#8217;re just not that different; the hardest adjustments are to using an interpreted language instead of a compiled language, and to dynamic typing instead of static typing. Even with a language a bit further out &#8211; Python or Ruby, for example &#8211; the syntax remains relatively straightforward to learn.</p>
+<p>But here&#8217;s the trick: a language is more than syntax. Think about it: English is more than its grammar, and indeed more than merely its vocabulary. Learning English requires first learning its vocabulary and its grammatical rules. Mastering English, however, requires learning far more than simply words and the basics of how they fit together. It involves gaining a knowledge of connotation as well as denotation. It requires understanding of culture. It demands grasping the ways that different words and phrases and approaches are appropriate (or not) in various contexts.</p>
+<p>The same is true for a programming language. It is one thing to know how to construct a <code>foreach</code> statement in PHP. It is another thing entirely to recognize that sometimes you&#8217;re better using a library function that does the same thing you want your loop to do, only faster and better. You have to learn the libraries, and in some cases you have to learn the standard tool sets.</p>
+<p>Learning Ruby is one thing. Putting it in practice in the web development community means learning more than Ruby or even its standard library though; the vast majority of Ruby web development these days seems to be using the Rails framework. Similarly, you can have a good handle on PHP and even know its library well &#8211; but you&#8217;ll be much more employable if you also know the Zend framework, because while it&#8217;s not quite an industry standard, it&#8217;s close.</p>
+<p>Even back in the world of static software, this is true. Good luck becoming a top-notch C++ programmer in a short time. Learning the way C++ approaches object-oriented development is simple. Learning the enormous library will take longer. Getting a good handle on templates? You&#8217;ll be at that for a <em>while</em>.</p>
+<p>This is the thing so many people fail to understand: software engineering (and even programming, which is only a subset of engineering) is more than knowing some syntax or the basics of logic. Being a really good developer &#8211; being the kind of developer I hope to be someday &#8211; requires having a good handle on the language and its library, its strengths and its quirks, the primary tool kits and the corner cases. It is not enough to be able to regurgitate the syntactical rules for the language; best practices come to be over time as people discover both the benefits and the costs of various approaches. The most obvious solution may also end up being the <em>wrong</em> solution.</p>
+<p>The only way to gain this knowledge is by immersing yourself in using it <em>and</em> by studying. You can either repeat the same mistakes everyone else has already made, or you can put forth the effort to educate yourself so you can avoid them. You can either content yourself with a superficial understanding of the language, or you can dive in and really get a handle on how it works and what really makes it tick.</p>
+<p>Shockingly, these are the same realities that apply to learning <em>any</em> new subject. No one ever mastered the piano, or became a skillful tennis player, or really succeeded at gaining any skill without putting in significant time and effort. If one of the major benefits of the modern web design and development is that just anyone can jump in and start doing it, one of the problems is the same reality &#8211; because most of the people who jump in and start are not willing to do the hard work to actually become <em>good</em> at their field. They don&#8217;t want to study, they don&#8217;t want to dig in to the <em>hows</em> and <em>whys</em> as well as the whats of any given discipline. And accordingly, they just aren&#8217;t very good.</p>
+<p>If you&#8217;re not prepared to work hard, be prepared to always be a third-rater. If you want to do well, be prepared to work hard. Stop thinking you know a language because you know the syntax. Stop thinking you know design principles because you&#8217;ve read a few articles. Stop thinking you don&#8217;t need to study any more. You <em>always</em> need to study more.</p>
+
+            </div>
+
+                           <footer id="comments">
+                  <h3 class="discussion-header">Discussion</h3>
+                  <ul class="comments-ul">
+
+   <li class="comment-li" id="comment-li-35">
+      <article class="comment" id="comment-35">
+         <div class="comment-avatar">
+            <img alt='' src='http://1.gravatar.com/avatar/17043c08afe5738d44b27537089c6d9b?s=82&amp;d=identicon&amp;r=G' class='avatar avatar-82 photo' height='82' width='82' />         </div>
+         <div class="comment-meta">
+            <p>
+                              <span>Jerrad Genson thought to say:</span>
+                              <span class="comment-date">
+                  <a href="index.html#comment-35" class="comment-permalink' title='comment permalink">
+                     12:12pm on 2/1/2012                  </a>
+               </span>
+            </p>
+         </div>
+<p>Like most skills worth knowing, software development takes time and dedication to master. Indeed, Peter Norvig wrote in <a href="http://norvig.com/21-days.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-comment','http://norvig.com']);" title="Teach Yourself Programming in Ten Years" rel="nofollow">Teach Yourself Programming in Ten Years</a>, about the &#8220;How to Learn Language X in N Days&#8221; fad, that &#8220;There are no books on how to learn Beethoven, or Quantum Physics, or even Dog Grooming in a few days&#8221;, and &#8220;the book can only be talking about a superficial familiarity, not a deep understanding. As Alexander Pope said, a little learning is a dangerous thing.&#8221;</p>
+<p>And so it is. I know people in managerial positions at software companies who make key development decisions, without the experience of having ever written a program of any significance in their life (but they took a class over C in college! &#8230;or was it C++?).  Need I even mention what usually becomes of the projects these people manage? As the software industry has taught us, time and time again, there are no shortcuts worth taking here.</p>
+<p>But there are a few points to which I digress.</p>
+<p>&#8220;You don’t really know a language till you know the library and the tools. Syntax is easy.&#8221;</p>
+<p>Certainly, vague familiarity of a language&#8217;s syntax does not constitute a genuine understanding of the language. But what does it mean to know the library and tools? Must one memorize every class in the standard library to know Java? Are Tkinter, wxPython, Django, etc. all required to know Python? </p>
+<p>Not really. In fact, Eric Raymond said that &#8220;web application frameworks like RubyOnRails, CakePHP, Django may make it too easy to reach a superficial sort of understanding that will leave you without resources when you have to tackle a hard problem, or even just debug the solution to an easy one&#8221; (<a href="http://www.catb.org/~esr/faqs/hacker-howto.html#skills1" onclick="javascript:_gaq.push(['_trackEvent','outbound-comment','http://www.catb.org']);" title="How To Become A Hacker" rel="nofollow">How to Become a Hacker</a>). Now, Ramond wasn&#8217;t advocating that software developers should forgo web application frameworks, or reinvent the wheel all the time; he was talking specifically about learning to program. &#8220;A hacker&#8221;, he wrote, &#8220;cannot approach problem-solving like a plumber in a hardware store; you have to know what the components actually do&#8221;. </p>
+<p>What separates excellent programmers from mediocre programmers is not the number of tools they know, or library functions they&#8217;ve memorized. Perhaps the most relevant quote from Raymond&#8217;s essay is this: &#8220;You need to learn how to think about programming problems in a general way, independent of any one language. To be a real hacker, you need to get to the point where you can learn a new language in days by relating what&#8217;s in the manual to what you already know.&#8221; This is an interesting assertion; maybe it&#8217;s languages that are easy, and programming that&#8217;s a bit harder. Mastering the core programming concepts &#8211; the language paradigms, idioms, algorithms, data structures, and design patterns &#8211; is much more important than mastering the languages themselves. </p>
+<p>The most recent language I learned was OCaml. When I developed my first non-trivial program in OCaml, I found myself reaching for the library quite often. I didn&#8217;t think anything of it at the time, but I hadn&#8217;t studied OCaml&#8217;s library enough to even become familiar with what was in it. I&#8217;ve learned enough languages that I know what functions and classes I can expect to find in a standard library. In other words, I know when it&#8217;s appropriate to reach for a language&#8217;s library, and when it isn&#8217;t. The hard part about learning OCaml wasn&#8217;t how to make good use of the library, it was the concepts the language employed that I wasn&#8217;t familiar with &#8211; pattern matching and the Hindley-Milner type system. The same thing applied when I was learning ANTLR; since I was already familiar with similar tools, and had written a top-down recursive descent parser by hand, learning another LL parser generator wasn&#8217;t too difficult.  </p>
+<p>Don&#8217;t misunderstand me, language is important, and mastering every detail can be valuable. I program much faster in Python than I do in OCaml, largely because I rarely have to use the reference manual in Python. But programmer productivity is not nearly as important as knowing how to write reliable, maintainable code, and I learned neither skill from studying Python&#8217;s library.</p>
+<p>Regardless, your main point about studying the skills you use was spot on, and very well-stated. The software industry is massive. There are many ways to apply programming knowledge, and my digressions may partially be a result of that &#8211; the specific niche that I cater to may be very different from what you do (for instance, I have never done much web development), and I enjoyed reading about your perspective.</p>
+<a class='comment-reply-link' href='index61aa.html?replytocom=35#respond' onclick='return addComment.moveForm("comment-35", "35", "respond", "174")'>Offer a rejoinder&darr;</a>      </article>
+
+<ul class="children">
+   <li class="comment-li" id="comment-li-36">
+      <article class="comment" id="comment-36">
+         <div class="comment-avatar">
+            <img alt='' src='http://0.gravatar.com/avatar/c096ed07142659408dc6651f8320acd3?s=82&amp;d=identicon&amp;r=G' class='avatar avatar-82 photo' height='82' width='82' />         </div>
+         <div class="comment-meta">
+            <p>
+                              <span><a href="http://www.chriskrycho.com/" class="comment-author-link">Chris Krycho</a> thought to say:</span>
+                              <span class="comment-date">
+                  <a href="index.html#comment-36" class="comment-permalink' title='comment permalink">
+                     12:29pm on 2/1/2012                  </a>
+               </span>
+            </p>
+         </div>
+<p>Jerrad, thanks for the comment and the pushback. You&#8217;re a far more seasoned and experienced developer than me, and your comments here have me thinking, which is good. I think you&#8217;re absolutely right that the real skill is knowing when to pull out a library reference and when to just plain do it the hard way, because the hard way is sometimes the best (and sometimes the only) way to get it done.</p>
+<p>I&#8217;ll have to take a look at Raymond&#8217;s essay, as it seems helpful and on point, as well.</p>
+<p>I think you&#8217;re absolutely right: being a good <em>programmer</em> has very little to memorizing library functions; speed and efficiency are not everything, and in fact may be very secondary concerns when put up against doing something <em>right</em>. Productivity isn&#8217;t and shouldn&#8217;t be our only concern. My point was more that seeing yourself as (much less selling yourself as) a really solid PHP developer when you don&#8217;t know the library at all, but can turn out tons of toy scripts &#8211; this kind of knowing the syntax but not the <em>language</em> &#8211; is dishonest to yourself and to your customers. It&#8217;s something I&#8217;m particularly sensitive to because I&#8217;m picking up freelancing and I&#8217;m trying very hard to be very honest about my strengths and my weaknesses with potential customers along the way. Really top-notch PHP developers know the libraries, tools, and frameworks. But, and this is where your point is essential, they also know when those are appropriate parts of the solution to a given problem, and <em>when they aren&#8217;t</em>.</p>
+<p>In that sense, then, there&#8217;s a hierarchy at play here: syntax &rarr; language &rarr; programming. You really can&#8217;t program without knowing <em>some</em> language. (A clarification is in order even there: you can certainly practice the logical and problem-solving aspects. I&#8217;m a tolerably decent developer not because of the depth of my software background but because my degree in physics taught me how to think and how to solve problems I didn&#8217;t even understand when I first looked at them.) And to become skilled in a single language requires getting a handle on more than the syntax. But being a good programmer &#8211; being a good engineer &#8211; requires mastery of much more fundamental skills, skills that have far more to do with thinking about problems than about the knowledge set.</p>
+<p>Thanks for commenting. <img src="../wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /> </p>
+<a class='comment-reply-link' href='index2636.html?replytocom=36#respond' onclick='return addComment.moveForm("comment-36", "36", "respond", "174")'>Offer a rejoinder&darr;</a>      </article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment-li" id="comment-li-37">
+      <article class="comment" id="comment-37">
+         <div class="comment-avatar">
+            <img alt='' src='http://1.gravatar.com/avatar/17043c08afe5738d44b27537089c6d9b?s=82&amp;d=identicon&amp;r=G' class='avatar avatar-82 photo' height='82' width='82' />         </div>
+         <div class="comment-meta">
+            <p>
+                              <span>Jerrad Genson thought to say:</span>
+                              <span class="comment-date">
+                  <a href="index.html#comment-37" class="comment-permalink' title='comment permalink">
+                     1:52pm on 2/1/2012                  </a>
+               </span>
+            </p>
+         </div>
+<p>Chris, I appreciate your response, and thank you for fixing my links. Eric Raymond and Paul Graham&#8217;s programming essays have strongly contributed towards my growth as a software developer. I highly recommend them. </p>
+<p>I can understand and sympathize with your frustration; as an honest person, competing with dishonest people for development contracts (or jobs) is a sobering experience. When I was a hiring manager for my company,  I interviewed all kinds of experts who couldn&#8217;t pass a basic programming exam, in any language. More often than not, their code wouldn&#8217;t even compile. I imagine the problem is worse with contract jobs.  Knowing the tools you work with is very important &#8211; I don&#8217;t mean to imply that it&#8217;s not. There is something to be said for the rare programmer who has truly mastered the language he&#8217;s coding in. Incidentally, I know the syntax of many languages, but I only list languages on my resume that I know really well. For example, I used PHP in a CS class when I was an undergrad, but I don&#8217;t feel that I&#8217;m proficient enough with PHP to say that I know it. For the languages I do list, I indicate my level of proficiency, and briefly describe the projects I&#8217;ve worked on with them.</p>
+<p>You summarized my point well with your hierarchy. That is the spirit of what I was getting at. I think programming is a lot like playing the piano; a lot of people can do it, but not many do it well. And on a final note: I&#8217;ve learned that there is very little correlation between skilled programmers and degreed programmers. One of the highest scores on my programming exam was achieved by someone who didn&#8217;t have a CS degree. So if that bothers you, it really shouldn&#8217;t.</p>
+<a class='comment-reply-link' href='indexc916.html?replytocom=37#respond' onclick='return addComment.moveForm("comment-37", "37", "respond", "174")'>Offer a rejoinder&darr;</a>      </article>
+
+<ul class="children">
+   <li class="comment-li" id="comment-li-38">
+      <article class="comment" id="comment-38">
+         <div class="comment-avatar">
+            <img alt='' src='http://0.gravatar.com/avatar/c096ed07142659408dc6651f8320acd3?s=82&amp;d=identicon&amp;r=G' class='avatar avatar-82 photo' height='82' width='82' />         </div>
+         <div class="comment-meta">
+            <p>
+                              <span><a href="http://www.chriskrycho.com/" class="comment-author-link">Chris Krycho</a> thought to say:</span>
+                              <span class="comment-date">
+                  <a href="index.html#comment-38" class="comment-permalink' title='comment permalink">
+                     2:32pm on 2/1/2012                  </a>
+               </span>
+            </p>
+         </div>
+<p>I read one while on a break (and a few other articles linked from it and related to it), and will read the other this afternoon. Very good stuff.</p>
+<p>Because of the enormous amount of work out there for web developers, there is an equally large number of people trying to get work in that area. Some of them are like me &#8211; hard working and dedicated to learning their craft well. Others are basically con artists, who know little more than the letters they put on their resum&eacute;. When you have lots of experience, that distinguishes you from the masses, but when you don&#8217;t, well&#8230; my standing assumption at this point is that my honesty about my comparative newness will pay off, especially when combined with the effort to actually keep getting better. The trick, though, is getting those jobs in the first place. I&#8217;ve done a fair bit of personal, free, and low-cost work over the last year to just be in a position where I honestly feel like I can put Javascript and PHP on my resum&eacute;&#8230; but then I immediately need to clarify my skill level. It&#8217;s a catch 22, unfortunately, although one that the next 6 months should help eliminate, as I now have contract work that is improving my skill and knowledge dramatically.</p>
+<p>It doesn&#8217;t bother me being an outsider. It does mean I have had to work harder to get up to speed since getting out of college, but I actually am very glad that I have a physics degree and not a CS/CE degree. The training in thinking I got there is invaluable, and I&#8217;m certainly not pigeonholed into any particular role. Costs and benefits. In my case, I wouldn&#8217;t trade that physics degree for anything. (But I do learn an awful lot from my degreed colleagues!)</p>
+<a class='comment-reply-link' href='indexb901.html?replytocom=38#respond' onclick='return addComment.moveForm("comment-38", "38", "respond", "174")'>Offer a rejoinder&darr;</a>      </article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment-li" id="comment-li-39">
+      <article class="comment" id="comment-39">
+         <div class="comment-avatar">
+            <img alt='' src='http://1.gravatar.com/avatar/17043c08afe5738d44b27537089c6d9b?s=82&amp;d=identicon&amp;r=G' class='avatar avatar-82 photo' height='82' width='82' />         </div>
+         <div class="comment-meta">
+            <p>
+                              <span>Jerrad Genson thought to say:</span>
+                              <span class="comment-date">
+                  <a href="index.html#comment-39" class="comment-permalink' title='comment permalink">
+                     2:50pm on 2/1/2012                  </a>
+               </span>
+            </p>
+         </div>
+<p>I really meant something more along the lines of &#8220;don&#8217;t let it discourage you from pursuing a career in software&#8221;. Of course, there is no reason a physics degree should bother you. In fact, having knowledge of other industries may help you apply your software skills, and many techniques in computer science were inspired by solutions to problems in non-CS fields. My degree wasn&#8217;t solely in computer science, and I&#8217;m glad it wasn&#8217;t. Diversity is definitely a good thing here. </p>
+<p>If you enjoyed Raymond&#8217;s essays, you may want to take a look at these as well: <a href="http://www.paulgraham.com/articles.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-comment','http://www.paulgraham.com']);" rel="nofollow">http://www.paulgraham.com/articles.html</a></p>
+<a class='comment-reply-link' href='indexbed3.html?replytocom=39#respond' onclick='return addComment.moveForm("comment-39", "39", "respond", "174")'>Offer a rejoinder&darr;</a>      </article>
+
+<ul class="children">
+   <li class="comment-li" id="comment-li-40">
+      <article class="comment" id="comment-40">
+         <div class="comment-avatar">
+            <img alt='' src='http://0.gravatar.com/avatar/c096ed07142659408dc6651f8320acd3?s=82&amp;d=identicon&amp;r=G' class='avatar avatar-82 photo' height='82' width='82' />         </div>
+         <div class="comment-meta">
+            <p>
+                              <span><a href="http://www.chriskrycho.com/" class="comment-author-link">Chris Krycho</a> thought to say:</span>
+                              <span class="comment-date">
+                  <a href="index.html#comment-40" class="comment-permalink' title='comment permalink">
+                     2:51pm on 2/1/2012                  </a>
+               </span>
+            </p>
+         </div>
+<p>Thanks for the encouragement. I&#8217;ll definitely take a look at that essay later!</p>
+<a class='comment-reply-link' href='index5cd6.html?replytocom=40#respond' onclick='return addComment.moveForm("comment-40", "40", "respond", "174")'>Offer a rejoinder&darr;</a>      </article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+                  </ul> <!-- comments-ul -->
+                  <div id="respond">
+								<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title"><h2>Your rejoinder to <a href="#comment-35">Jerrad Genson</a></h2> <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond">Opt for silence instead&uarr;</a></small></h3>
+									<form action="http://chriskrycho.com/web/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="require-contact-info">Anonymity is <em>most</em> unhelpful. Please identify yourself!</p><p class="email-anonymity">(Your email will not be published.)</p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>												<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Fire away!" />
+							<input type='hidden' name='comment_post_ID' value='174' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='35' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="876a19d9c0" /></p><!-- BEGIN: subscribe to comments reloaded --><p><label for='subscribe-reloaded'><input style='width:30px' type='checkbox' name='subscribe-reloaded' id='subscribe-reloaded' value='yes' /> Notify me of followup comments via e-mail. You can also <a href='../comment-subscriptions/indexa3ae.html?srp=174&amp;sra=s'>subscribe</a> without commenting.</label></p><!-- END: subscribe to comments reloaded -->					</form>
+							</div><!-- #respond -->
+			        <script type="text/javascript">
+            jQuery(document).ready(function () {
+                jQuery('#commentform').submit(function () {
+                    _gaq.push(
+                            ['_setAccount', 'UA-10702079-9'],
+                            ['_trackEvent', 'comment', 'submit']
+                    );
+                });
+            });
+        </script>
+		<p class="allowed-text">You may use <a href="https://help.github.com/articles/github-flavored-markdown" target="_blank">GitHub-flavored Markdown</a> and/or these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:<br/><code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>                  </div>
+               </footer>
+
+         </article>            <nav id="page-nav">
+         <ul>
+            <li class="newer">
+               <a href="../giving-up/index.html" rel="next">&larr; back to the future</a>            </li>
+            <li class="home"><a href="../index.html">&ndash;Home&ndash;</a></li>
+            <li class="older">
+               <a href="../on-pirates-and-piracy/index.html" rel="prev">into the past &rarr;</a>            </li>
+         </ul>
+      </nav>
+         </div>      <footer id="site-footer">
+
+            <nav id="supersite-nav" class="footer-block">
+         <h1>Navigate</h1>
+         <ul>
+            <li>
+               <h2>Search this site:</h2>
+               
+<form role="search" class="customform" method="get" action="http://chriskrycho.com/web/">
+   <input type="text" value="" name="search" id="search" placeholder="discover something"/>
+   <input type="submit" id="searchsubmit" value="&rarr;" />
+</form>            </li>
+            <li>
+               <a href="../../index.html">Home</a><br/>
+               <i>Creativity, reflection, & passionate endeavors.</i>
+            </li>
+            <li>
+               <a href="../index.html">Designgineering</a><br/>
+               <i>Web design & development.</i>
+            </li>
+            <li>
+               <a href="../../theology/index.html">Ardent Fidelity</a><br/>
+               <i>Reflections on a Christ-centered life.</i>
+            </li>
+            <li>
+               <a href="../../art/index.html">Ars Artis</a><br/>
+               <i>Creations & musings on creativity.</i>
+            </li>
+            <li>
+               <a href="../../family/index.html">From the Hearth</a><br/>
+               <i>Updates on our growing family.</i>
+            </li>
+         </ul>
+      </nav>
+
+      <section id="connect" class="footer-block">
+         <h1>Connect</h1>
+         <ul>
+            <li><h2>Opt for emails:</h2>			<div class="textwidget"><form class="customform" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=chriskrycho/web', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+<input type="text" name="email" placeholder="your.name@domain.com"/>
+<input type="hidden" value="chriskrycho/web" name="uri"/>
+<input type="hidden" name="loc" value="en_US"/>
+<input type="submit" value="&rarr;" />
+</form></div>
+		</li>            <li>
+               <a href="../feed/index.html" title="RSS feed" target="_blank">RSS/Atom</a><br/>
+               <i>To the feed reader, quick!</i>
+            </li>
+            <li>
+               <a href='https://alpha.app.net/chriskrycho' rel='me' data-type='follow' data-user-id='@chriskrycho' title="app.net/chriskrycho">App.net</a><br/>
+               <i>Less noisy, more characters.</i>
+            </li>
+            <li>
+               <a href="#" class="email-link" title="chris|@|chriskrycho|.|com" target="_blank">Email</a><br/>
+               <i>Send me a letter. But without the paper.</i>
+            </li>
+            <li>
+               <a href="http://www.facebook.com/chriskrycho" title="facebook.com/chriskrycho" target="_blank">Facebook</a><br/>
+               <i>Fun party meets family get-together.</i>
+            </li>
+            <li>
+               <a href="https://plus.google.com/100517719789069874571/" title="Google+ profile" target="_blank">Google+</a><br/>
+               <i>The nerdy new kid on the block.</i>
+            </li>
+            <li>
+               <a href="http://www.goodreads.com/user/show/3165223-chris-krycho" title="Goodreads profile" target="_blank">Goodreads</a><br/>
+               <i>A bookshelf, in cyberspace!</i>
+            </li>
+            <li>
+               <a href="http://www.linkedin.com/in/chriskrycho" title="LinkedIn Profile" target="_blank">LinkedIn</a><br/>
+               <i>A place for professional professionals.</i>
+            </li>
+            <li>
+               <a href="http://nosegue.tumblr.com/">No Segue</a><br/>
+               <i>A Tumblr about technology</i>
+            </li>
+            <li>
+               <a href="http://www.twitter.com/chriskrycho" title="twitter.com/chriskrycho" target="_blank">Twitter</a><br/>
+               <i>Your spastic journalist neighbors.</i>
+            </li>
+            <li>
+               <a href="http://about.me/chriskrycho" title="About.me profile" target="_blank">About.me</a><br/>
+               <i>Biographical sundries & links galore!</i>
+            </li>
+            <li>
+               <a href="http://www.runningahead.com/logs/2667b469aeda433382cbcc8ed413d964/profile" target="_blank">RunningAhead</a><br/>
+               <i>I run and run and run some more.</i>
+            </li>
+         </ul>
+      </section>
+
+      <section id="read" class="footer-block">
+         <h1>Read</h1>
+         <div class="eg-archives-columns"><ul>	<li><a href='../2013/12/index.html'>December 2013</a></li>
+	<li><a href='../2013/10/index.html'>October 2013</a></li>
+	<li><a href='../2013/09/index.html'>September 2013</a></li>
+	<li><a href='../2013/08/index.html'>August 2013</a></li>
+	<li><a href='../2013/06/index.html'>June 2013</a></li>
+	<li><a href='../2013/05/index.html'>May 2013</a></li>
+	<li><a href='../2013/03/index.html'>March 2013</a></li>
+	<li><a href='../2013/02/index.html'>February 2013</a></li>
+	<li><a href='../2013/01/index.html'>January 2013</a></li>
+	<li><a href='../2012/12/index.html'>December 2012</a></li>
+	<li><a href='../2012/11/index.html'>November 2012</a></li>
+</ul><ul>
+	<li><a href='../2012/10/index.html'>October 2012</a></li>
+	<li><a href='../2012/09/index.html'>September 2012</a></li>
+	<li><a href='../2012/08/index.html'>August 2012</a></li>
+	<li><a href='../2012/07/index.html'>July 2012</a></li>
+	<li><a href='../2012/06/index.html'>June 2012</a></li>
+	<li><a href='../2012/05/index.html'>May 2012</a></li>
+	<li><a href='../2012/04/index.html'>April 2012</a></li>
+	<li><a href='../2012/03/index.html'>March 2012</a></li>
+	<li><a href='../2012/02/index.html'>February 2012</a></li>
+	<li><a href='../2012/01/index.html'>January 2012</a></li></ul></div>      </section>
+
+      <section id="discuss" class="footer-block">
+         <h1>Discuss</h1>
+         <h2></h2><ul><li><a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html#comment-16469">Josh, another bit of follow-up. As noted in my prev...</a> &ndash; Chris Krycho <i>on <a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html">Python—homebrew, virtualenv, and OS X Framework builds</a></i></li><li><a href="../modular-scales-fantastic-but-dont-overdo-it/index.html#comment-15318">z6305
+
+c17217
+
+R10941
+</a> &ndash; VedqueltWeree <i>on <a href="../modular-scales-fantastic-but-dont-overdo-it/index.html">Modular scales: fantastic, but don't overdo it</a></i></li><li><a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html#comment-15073">My pleasure. However, fair warning: I just discover...</a> &ndash; Chris Krycho <i>on <a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html">Python—homebrew, virtualenv, and OS X Framework builds</a></i></li><li><a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html#comment-14916">Thank you.  This was a source of much frustration.
+...</a> &ndash; Josh Baylin <i>on <a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html">Python—homebrew, virtualenv, and OS X Framework builds</a></i></li><li><a href="../jira-confluence-intranets-and-windows-firewall/index.html#comment-11602">Thank you so much for this awesome post! I've been ...</a> &ndash; Henrik Olsen <i>on <a href="../jira-confluence-intranets-and-windows-firewall/index.html">JIRA, Confluence, Intranets and Windows Firewall</a></i></li></ul>      </section>
+
+      <section id="colophon" class="colophon footer-block">
+         <h1>Colophon</h1>
+         <p>
+            &copy;2012&ndash;2014 Chris Krycho         </p>
+               </section>
+   </footer>
+   <!-- MathJax Latex Plugin installed: Disabled as no shortcodes on this page --><script src="http://bible.logos.com/jsapi/Referencetagging.js" type="text/javascript"></script>
+<script type="text/javascript">
+			Logos.ReferenceTagging.lbsBibleVersion = "";
+			Logos.ReferenceTagging.lbsLibronixBibleVersion = "";
+									Logos.ReferenceTagging.lbsLibronixLinkIcon = "";
+			Logos.ReferenceTagging.lbsNoSearchClassNames = [ "commentlist" ];			Logos.ReferenceTagging.lbsUseTooltip = false;			Logos.ReferenceTagging.lbsNoSearchTagNames = [  ];
+															Logos.ReferenceTagging.tag();
+		</script>
+   <script src='https://d2zh9g63fcvyrq.cloudfront.net/adn.js'></script>
+</body>
+
+<!-- Mirrored from chriskrycho.com/web/syntax-is-easy-languages-are-a-bit-harder/?replytocom=35 by HTTrack Website Copier/3.x [XR&CO'2013], Wed, 01 Jan 2014 03:23:51 GMT -->
+</html>
