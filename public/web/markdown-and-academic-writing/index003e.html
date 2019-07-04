@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en-US" class="no-wp-admin">
+
+<!-- Mirrored from chriskrycho.com/web/markdown-and-academic-writing/?replytocom=6773 by HTTrack Website Copier/3.x [XR&CO'2013], Wed, 01 Jan 2014 03:23:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+   <title>
+      Markdown and Academic Writing &raquo; Designgineering &raquo; Chris Krycho   </title>
+
+   <!-- Set document meta -->
+   <meta charset="UTF-8" />
+
+   <!-- Mobile devices should view the screen at their native width -->
+   <meta name='viewport' content='width=device-width,initial-scale=1.0' />
+
+   <!-- Styles -->
+   <link rel="stylesheet" type="text/css" media="screen" href="../wp-content/themes/ck-web/style.css" />
+   <link rel="stylesheet" type="text/css" media="screen" href="../../utilities/tooltip/jquery.tooltip.css"
+
+   <!-- Authorship -->
+   <link rel="author" href="https://plus.google.com/u/0/100517719789069874571/" />
+   
+   <!-- All Javascript (including JQuery) functionality -->
+   <script type="text/javascript" src="http://use.typekit.com/aqh6miw.js"></script>
+
+   <!-- jQuery -->
+   <script type="text/javascript" src="../../utilities/jquery.min.js"></script>
+   <script type="text/javascript" src="../../utilities/tooltip/jquery.tooltip.min.js"></script>
+   <script type="text/javascript" src="../../utilities/custom-functions.js"></script>
+
+   <!-- IE Fixes -->
+   <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <link rel="stylesheet" type="text/css" media="screen" href="/styles/ie.css" />
+   <![endif]-->
+   
+   
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.22 - http://yoast.com/wordpress/seo/ -->
+<meta name="description" content="Writing academic papers with Markdown is great—with one wrinkle: you need a good system for handling footnotes. This one works pretty well."/>
+<link rel="canonical" href="index.html" />
+<link rel="author" href="https://plus.google.com/100517719789069874571/"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@chriskrycho"/>
+<meta name="twitter:domain" content="Designgineering"/>
+<meta name="twitter:creator" content="@chriskrycho"/>
+<meta name="twitter:description" content="Writing academic papers with Markdown is great—with one wrinkle: you need a good system for handling footnotes. This one works pretty well."/>
+<meta name="twitter:title" content="Markdown and Academic Writing - Designgineering"/>
+<meta name="twitter:url" content="http://chriskrycho.com/web/markdown-and-academic-writing/"/>
+<!-- / Yoast WordPress SEO plugin. -->
+
+
+            <script type="text/javascript">//<![CDATA[
+            // Google Analytics for WordPress by Yoast v4.3.3 | http://yoast.com/wordpress/google-analytics/
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-10702079-9']);
+				            _gaq.push(['_setCustomVar',2,'year','2013',3],['_setCustomVar',3,'category','posts',3],['_trackPageview']);
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+            //]]></script>
+			<link rel="alternate" type="application/rss+xml" title="Designgineering &raquo; Markdown and Academic Writing Comments Feed" href="feed/index.html" />
+<link rel='stylesheet' id='wp-syntax-css-css'  href='../wp-content/plugins/wp-syntax/css/wp-syntax5152.css?ver=1.0' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-includes/js/comment-reply.mincaf6.js?ver=3.9-alpha'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery3e5a.js?ver=1.10.2'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min1576.js?ver=1.2.1'></script>
+<meta name="generator" content="WordPress 3.9-alpha" />
+<script type="text/javascript" src="../wp-content/plugins/wp-syntax-effects/js/wp-syntax-effects.js"></script>
+</head>
+<body>
+<div id="decorative-wrapper">
+
+
+   <!--[if lt IE 9]>
+   <div id="nav-wrapper">
+   <![endif]-->
+   
+   <nav id="site-nav" class="menu-main-nav-container"><ul id="menu-main-nav" class="menu"><li id="menu-item-12" class="level-1 menu-item menu-item-type-post_type menu-item-object-page menu-item-12"><a href="../work/index.html" >Work</a></li>
+<li id="menu-item-219" class="level-1 menu-item menu-item-type-post_type menu-item-object-page menu-item-219"><a href="../tools/index.html" >Tools</a></li>
+<li id="menu-item-858" class="level-1 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-858"><a href="../projects/index.html" >Projects</a></li>
+<li id="menu-item-11" class="level-1 hide menu-item menu-item-type-post_type menu-item-object-page menu-item-11"><a href="../process/index.html" >Process</a></li>
+<li id="menu-item-10" class="level-1 menu-item menu-item-type-post_type menu-item-object-page menu-item-10"><a href="../web-professionals/index.html" >Web Professionals</a></li>
+</ul></nav>   
+   <!--[if lt IE 9]>
+   </div>
+   <![endif]-->
+
+   <header id="site-header">
+      <h1><a href="../index.html">Designgineering</a></h1>
+      <h2><span class="italic">web design &amp; development <span class="break">by <a href='../../index.html'>Chris Krycho</a></span></span></h2>
+   </header>
+   
+         
+               <article>
+
+            <header>
+               <h1>
+                  Markdown and Academic Writing               </h1>
+            </header>
+
+                        <div class="content-meta">
+
+                              <p class="pubdate">Published: <a href="index.html" class="permalink">May 16, 2013</a></p>
+
+                              <p class="comments">Comments: <a href="index.html#comments" class="permalink">10</a></p>
+
+                              <p class="categories">Filed under: <a href="../posts/index.html" title="View all posts in Posts" rel="category tag">Posts</a></p>
+
+                           </div>
+            
+                        <div class="content hyphenate">
+
+               <p>Markdown took over my writing life this semester, as I&#8217;ve <a href="../why-i-love-markdown/index.html" title="Why I Love Markdown">mentioned</a>. I took nearly all my class notes in Markdown (after a brief interval of using Evernote and an even briefer pass with Microsoft Word&#8212;neither of them quite worked for me, especially as my addiction grew). The only hiccup with my growing delight in the combination of <a href="http://daringfireball.net/projects/markdown/" >Markdown</a> and <a href="http://bywordapp.com/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://bywordapp.com']);">Byword</a> was the challenge of writing papers in them. There was little question for me that it was worth the few additional wrinkles it entailed, however: a nice clean writing environment and the obviousness of Markdown (not to mention the revision-history&#8211; and version-control&#8211;friendly nature of plain text) inclined me <em>strongly</em> toward using it.</p>
+<p>For main paper content&#8212;all those lovely paragraphs I hammered out&#8212;Markdown was sublime. The trick for my papers this semester, though, was something core to any academic writing: footnotes. <span id="more-1056"></span>The problem isn&#8217;t Markdown; just about every version out there (except the original) has support for a simple footnote syntax:</p>
+<pre><code>Writing along and now we need a footnote.[^1] Then we go merrily along on our way again.
+
+[^1]: Here's the content for that footnote. Simple enough---obvious, even.
+</code></pre>
+<p>No, the real problem is <em>keeping track</em> of those footnotes. My  habit for blog posts and even class notes was to simply put the footnotes at the bottom of the piece. That makes sense for those kinds of content: it&#8217;s easy to keep track of the order of the notes, as one generally isn&#8217;t massively rearranging blog posts, much less class notes. So I&#8217;d simply go in order: <code>[^1]</code>, <code>[^2]</code>, and so on.</p>
+<p>Then I wrote my <a href="../../theology/contra-mundum-athanasius.html" title="Contra Mundum: A Biographical Sketch of Athanasius of Alexandria">first major academic paper</a> using Markdown and Byword. Wrangling the footnotes was painful, to say the least. In fact, at one point I switched the order of some of the pieces of the text, and would have had footnotes out of order if, thankfully, the two involved hadn&#8217;t been referencing the same author on the same page. In any case, I knew I had to come up with a better system when tackling my <a href="../../theology/head-coverings-an-exegesis-of-1-corinthians-11_2-16/index.html" title="Head Coverings! An Exegesis of 1 Corinthians 11:2--16">second major paper</a>, which promised to entail a much higher number of footnotes, given the greater complexity of the content.</p>
+<p>The system I devised worked spectacularly well, so I thought I&#8217;d share it in case anyone else is interested in using Markdown for academic writing.</p>
+<p>Since footnotes are essentially just another type of link, the text in them can be arbitrary. The text is simply replaced by a numeral&#8212;footnotes are always numbers or symbols, and in academic writing, they&#8217;re nearly always numbers because one quickly runs out of symbols. So Markdown handles this sensibly. Also, the order of the footnotes simply matches the order they appear in the text (even if you have them out of order where you define the footnote content). Thus:<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+<pre><code>In which I make a fool of myself.[^hippies] It's not exactly like that's *hard*.[^frogs]
+
+[^frogs]: Because, you see, I have a lot of practice.
+
+[^hippies]: Why in the *world* would anyone ever put their footnotes out of order? Well, one wouldn't---at least, not on purpose.
+</code></pre>
+<p>The resulting output will look like this:</p>
+<blockquote><p>
+  In which I make a fool of myself.<sup>1</sup> It&#8217;s not exactly like that&#8217;s <em>hard</em>.<sup>2</sup>
+</p></blockquote>
+<hr/>
+<blockquote><p>
+  <sup>1</sup>Why in the <em>world</em> would anyone ever put their footnotes out of order? Well, one wouldn&#8217;t&#8212;at least, not on purpose.</p>
+<p>  <sup>2</sup>Because, you see, I have a lot of practice.
+</p></blockquote>
+<p>The order has flipped, and the letters have been replaced by numerals, just as one would hope. I put this to good use when working on my paper. As with any well-constructed academic paper, I formulated my argument and made a detailed outline up front. Although the structure of the paper flexed and changed a bit as I went along, this gave me the basic parameters within which I was working at all times. At any given point, I was working in a distinction marked off by at least one top-level (<em>Introduction</em> or <em>Analysis</em> or <em>Conclusion</em>) and often by a subhead. Furthermore, I was always in a paragraph. I simply combined these elements to make up the marker for any given footnote.</p>
+<p>My footnote text formula was simple: I put together the first letter of each section followed by the paragraph number (each separated by dashes), followed by the footnote number (actually a letter) for that paragraph. Thus, if I was writing the third paragraph of Section II of the Analysis part, the first footnote would have been &#8220;numbered&#8221; <code>[^A-II-3a]</code>.<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> The dashes are useful because they made it clear that I was working on <em>Section 2, Paragraph 3</em>, not <em>Analysis, Paragraph 23</em>. Further, I kept the footnotes immediately next to the paragraph with which they belonged, making it easy to find them and move them as well. Thus, if and when I moved pieces around, I usually only had to change a few numbers related to that footnote&#8212;most frequently, just switching the paragraph numbers.</p>
+<p>While this was certainly a bit more work than the automatic footnote generation one gets with Microsoft Word, it quickly became a smooth process. Sensible use of find and replace operations made the switches easy enough, and if it took me a few extra minutes to do those elements than it would have in Word, it took me a great deal less time in general because I work so much more quickly in Byword with Markdown than I do in Word.</p>
+<p>I hope some people will find the approach I developed useful for their own writing!</p>
+<hr />
+<h3>Addendum: Extended Example</h3>
+<p>I thought it might be useful to provide a slightly longer example to demonstrate what the foonoting looked like in practice. As a point of amusement (as well as illustrating one of the rather intriguing behaviors I laid out earlier), note that footnote <code>A-III-5a</code> comes after <code>A-III-5b</code> in the text; I switched the sentence order at some point during the editing, but never bothered changing the footnote order because I knew Markdown would generate the output correctly.</p>
+<pre><code>As if anticipating the ways this passage would be abused, Paul quickly moves to restrict its interpretation in the second sub-chiasm (verses 11--12): neither are women independent of men, nor men of women. Just as woman was originally formed from man, now all men are born of women. Thus, although woman was created from and for man, he cannot claim any superiority on that basis: she has become his source just as he was hers. Even more importantly, men and women are mutually dependent "in the Lord"---language that is common throughout Paul's epistles whenever he is calling believers to unity (cf. Ephesians 2:13--21, Philippians 2:1--2, Galatians 3:28). The ontological relationship between the sexes that God established in creation is to be preserved, but characterized by mutual dependence and unity in Christ---not by domineering or abuse.[^A-III-4a]
+
+[^A-III-4a]: Egalitarian and complementarian commentators are united on this point: see e.g. Belleville, 231; Fee, 522--524; Robertson and Plummer, 234; Lockwood, 375--376.
+
+Each sub-chiasm is relatively clear on its own, but the relationships between the sub-chiasms, and between each of them and the turn in verse 10, are less immediately obvious. Indeed, the primary challenge in interpreting this section---and, arguably, of interpreting the entire passage---is understanding verse 10. Translated somewhat woodenly, the sentence reads, "For this reason, a woman ought to have authority on/over her head, because of the angels" (author's translation). The language of the first sub-chasm suggests that Paul might mean be using "authority" (ἐξουσία) metonymously, despite the linguistic oddity of this move.[^A-III-5b]. If so, the passage reads, "a woman ought to have a symbol of authority on her head."[^A-III-5a] On the other hand, Paul's language in the following sentence ("Nevertheless, in the Lord woman is not independent of man") doubly suggests that he means what the text more naturally says: "a woman ought to have authority over her [own] head."[^A-III-5c] First, the use of "nevertheless" sets the second sub-chiasm in contrast to the turn. Second, the fact that Paul begins by emphasizing that woman is not independent of man (rather than vice versa) suggests that it is her authority, not the man's, that is in view.[^A-III-5d]
+
+[^A-III-5a]: So the ASV, ESV, HCSB, NET, NIV 1984, NASB, NKJV, NRSV. Others go even further: NLT, for example, has "a woman should wear a covering on her head to show she is under authority."
+
+[^A-III-5b]: Fee takes the unique nature of this would-be construction, unparalleled in any other Greek usage, as the basis for dismissing it out of hand (519 n. 23)---apparently ignoring his own suggestion, mere pages later, that "*exousia* was one of the Corinthians' own words.... Very likely that is the reason for this choice of words, which otherwise appears to be so unusual" (521), which satisfactorily explains Paul's otherwise odd linguistic choice.
+
+[^A-III-5c]: Fee, 520.
+
+[^A-III-5d]: Fee, 522--523.
+</code></pre>
+<p>The resulting output:</p>
+<blockquote><p>
+  As if anticipating the ways this passage would be abused, Paul quickly moves to restrict its interpretation in the second sub-chiasm (verses 11&#8211;12): neither are women independent of men, nor men of women. Just as woman was originally formed from man, now all men are born of women. Thus, although woman was created from and for man, he cannot claim any superiority on that basis: she has become his source just as he was hers. Even more importantly, men and women are mutually dependent &#8220;in the Lord&#8221;&#8212;language that is common throughout Paul&#8217;s epistles whenever he is calling believers to unity (cf. Ephesians 2:13&#8211;21, Philippians 2:1&#8211;2, Galatians 3:28). The ontological relationship between the sexes that God established in creation is to be preserved, but characterized by mutual dependence and unity in Christ&#8212;not by domineering or abuse.<sup>1</sup></p>
+<p>  Each sub-chiasm is relatively clear on its own, but the relationships between the sub-chiasms, and between each of them and the turn in verse 10, are less immediately obvious. Indeed, the primary challenge in interpreting this section&#8212;and, arguably, of interpreting the entire passage&#8212;is understanding verse 10. Translated somewhat woodenly, the sentence reads, &#8220;For this reason, a woman ought to have authority on/over her head, because of the angels&#8221; (author&#8217;s translation). The language of the first sub-chasm suggests that Paul might mean be using &#8220;authority&#8221; (ἐξουσία) metonymously, despite the linguistic oddity of this move.<sup>2</sup>. If so, the passage reads, &#8220;a woman ought to have a symbol of authority on her head.&#8221;<sup>3</sup> On the other hand, Paul&#8217;s language in the following sentence (&#8220;Nevertheless, in the Lord woman is not independent of man&#8221;) doubly suggests that he means what the text more naturally says: &#8220;a woman ought to have authority over her [own] head.&#8221;<sup>4</sup> First, the use of &#8220;nevertheless&#8221; sets the second sub-chiasm in contrast to the turn. Second, the fact that Paul begins by emphasizing that woman is not independent of man (rather than vice versa) suggests that it is her authority, not the man&#8217;s, that is in view.<sup>5</sup>
+</p></blockquote>
+<hr/>
+<blockquote>
+<ol>
+<li>
+<p>Egalitarian and complementarian commentators are united on this point: see e.g. Belleville, 231; Fee, 522&#8211;524; Robertson and Plummer, 234; Lockwood, 375&#8211;376.</li>
+</p>
+</li>
+<li>
+<p>Fee takes the unique nature of this would-be construction, unparalleled in any other Greek usage, as the basis for dismissing it out of hand (519 n. 23)&#8212;apparently ignoring his own suggestion, mere pages later, that &#8220;<em>exousia</em> was one of the Corinthians&#8217; own words&#8230;. Very likely that is the reason for this choice of words, which otherwise appears to be so unusual&#8221; (521), which satisfactorily explains Paul&#8217;s otherwise odd linguistic choice.</li>
+</p>
+</li>
+<li>
+<p>So the ASV, ESV, HCSB, NET, NIV 1984, NASB, NKJV, NRSV. Others go even further: NLT, for example, has &#8220;a woman should wear a covering on her head to show she is under authority.&#8221;</p>
+</li>
+<li>
+<p>Fee, 520.</p>
+</li>
+<li>
+<p>Fee, 522&#8211;523.</p>
+</li>
+</ol>
+</blockquote>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn:1">
+Note the extra spacing between the footnotes. I&#8217;m not sure why, but footnotes behave differently than regular links, which can be stacked one after another. Footnotes have to be separated as separate paragraphs&#8212;probably because they are paragraph-like entities. Someday I&#8217;ll look it up in the implementation to see why. But not today.&#160;<a href="#fnref:1" rev="footnote">&#8617;</a>
+</li>
+<li id="fn:2">
+Because of the relatively simple structure of my paper, I actually simplified this, dropping the top-level header and making a few other adjustments. But this is the gist of my approach, and it&#8217;s the framework in which I intend to work going forward.</p>
+<p>If you&#8217;re curious, I made this footnote with a simple <code>[^2]</code>. <em>Boring</em>.&#160;<a href="#fnref:2" rev="footnote">&#8617;</a>
+</li>
+</ol>
+</div>
+
+            </div>
+
+                           <footer id="comments">
+                  <h3 class="discussion-header">Discussion</h3>
+                  <ul class="comments-ul">
+
+   <li class="comment-li" id="comment-li-6075">
+      <article class="comment" id="comment-6075">
+         <div class="comment-avatar">
+            <img alt='' src='http://1.gravatar.com/avatar/b5ff3a287c2711bc4339ff2d770f6758?s=82&amp;d=identicon&amp;r=G' class='avatar avatar-82 photo' height='82' width='82' />         </div>
+         <div class="comment-meta">
+            <p>
+                              <span>Filip Witek thought to say:</span>
+                              <span class="comment-date">
+                  <a href="index.html#comment-6075" class="comment-permalink' title='comment permalink">
+                     7:05am on 8/17/2013                  </a>
+               </span>
+            </p>
+         </div>
+<p>Since I also tried writing my academic papers in Markdown, I&#8217;m very curious about how you managed to export your second major paper to PDF while perserving pagination-based attributes, such as footnotes printed at the end of each page. I have to submit my papers in PDF and so far, all I could do with Markdown documents was to simply export them to Rich Text Format and take care of the layout in Pages or Microsoft Word. Have you found a way to export Markdown documents to PDF while perserving the required aspects of layout of your academic papers?</p>
+<a class='comment-reply-link' href='index14c5.html?replytocom=6075#respond' onclick='return addComment.moveForm("comment-6075", "6075", "respond", "1056")'>Offer a rejoinder&darr;</a>      </article>
+
+<ul class="children">
+   <li class="comment-li" id="comment-li-6077">
+      <article class="comment" id="comment-6077">
+         <div class="comment-avatar">
+            <img alt='' src='http://0.gravatar.com/avatar/c096ed07142659408dc6651f8320acd3?s=82&amp;d=identicon&amp;r=G' class='avatar avatar-82 photo' height='82' width='82' />         </div>
+         <div class="comment-meta">
+            <p>
+                              <span><a href="../../index.html" class="comment-author-link">Chris Krycho</a> thought to say:</span>
+                              <span class="comment-date">
+                  <a href="index.html#comment-6077" class="comment-permalink' title='comment permalink">
+                     8:15am on 8/17/2013                  </a>
+               </span>
+            </p>
+         </div>
+<p>I cheated: I went via MS Word. I took the document I exported to Word and tweaked the styles a bit. The native PDF export functionality in OS X did the trick nicely for me, though I think I may have used the Adobe PDF conversion instead to reduce the file size with the embedded font file.</p>
+<p>That said, I <em>think</em> the LaTeX tools in Pandoc would probably do it as well; I haven&#8217;t tried yet.</p>
+<a class='comment-reply-link' href='indexdb1e.html?replytocom=6077#respond' onclick='return addComment.moveForm("comment-6077", "6077", "respond", "1056")'>Offer a rejoinder&darr;</a>      </article>
+
+<ul class="children">
+   <li class="comment-li" id="comment-li-6079">
+      <article class="comment" id="comment-6079">
+         <div class="comment-avatar">
+            <img alt='' src='http://1.gravatar.com/avatar/b5ff3a287c2711bc4339ff2d770f6758?s=82&amp;d=identicon&amp;r=G' class='avatar avatar-82 photo' height='82' width='82' />         </div>
+         <div class="comment-meta">
+            <p>
+                              <span>Filip Witek thought to say:</span>
+                              <span class="comment-date">
+                  <a href="index.html#comment-6079" class="comment-permalink' title='comment permalink">
+                     8:33am on 8/17/2013                  </a>
+               </span>
+            </p>
+         </div>
+<p>Hm. I guess I&#8217;ll download MacTeX package then. Thanks!</p>
+<a class='comment-reply-link' href='index3bb7.html?replytocom=6079#respond' onclick='return addComment.moveForm("comment-6079", "6079", "respond", "1056")'>Offer a rejoinder&darr;</a>      </article>
+
+<ul class="children">
+   <li class="comment-li" id="comment-li-6081">
+      <article class="comment" id="comment-6081">
+         <div class="comment-avatar">
+            <img alt='' src='http://0.gravatar.com/avatar/c096ed07142659408dc6651f8320acd3?s=82&amp;d=identicon&amp;r=G' class='avatar avatar-82 photo' height='82' width='82' />         </div>
+         <div class="comment-meta">
+            <p>
+                              <span><a href="../../index.html" class="comment-author-link">Chris Krycho</a> thought to say:</span>
+                              <span class="comment-date">
+                  <a href="index.html#comment-6081" class="comment-permalink' title='comment permalink">
+                     8:36am on 8/17/2013                  </a>
+               </span>
+            </p>
+         </div>
+<p>Good luck! It&#8217;s a beast; I&#8217;m downloading it myself right now. There&#8217;s a reason they recommend Safari: it&#8217;s a 2-GB download.</p>
+<a class='comment-reply-link' href='index0c9f.html?replytocom=6081#respond' onclick='return addComment.moveForm("comment-6081", "6081", "respond", "1056")'>Offer a rejoinder&darr;</a>      </article>
+
+<ul class="children">
+   <li class="comment-li" id="comment-li-6086">
+      <article class="comment" id="comment-6086">
+         <div class="comment-avatar">
+            <img alt='' src='http://1.gravatar.com/avatar/b5ff3a287c2711bc4339ff2d770f6758?s=82&amp;d=identicon&amp;r=G' class='avatar avatar-82 photo' height='82' width='82' />         </div>
+         <div class="comment-meta">
+            <p>
+                              <span>Filip Witek thought to say:</span>
+                              <span class="comment-date">
+                  <a href="index.html#comment-6086" class="comment-permalink' title='comment permalink">
+                     10:05am on 8/17/2013                  </a>
+               </span>
+            </p>
+         </div>
+<p>I downloaded MaxTeX (<a href="http://www.tug.org/mactex/morepackages.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-comment','http://www.tug.org']);" rel="nofollow">http://www.tug.org/mactex/morepackages.html</a>), which is a subset of TeX Live but still supports the Markdown to PDF conversion in Pandoc. Works perfectly fine!</p>
+      </article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment-li" id="comment-li-6080">
+      <article class="comment" id="comment-6080">
+         <div class="comment-avatar">
+            <img alt='' src='http://0.gravatar.com/avatar/c096ed07142659408dc6651f8320acd3?s=82&amp;d=identicon&amp;r=G' class='avatar avatar-82 photo' height='82' width='82' />         </div>
+         <div class="comment-meta">
+            <p>
+                              <span><a href="../../index.html" class="comment-author-link">Chris Krycho</a> thought to say:</span>
+                              <span class="comment-date">
+                  <a href="index.html#comment-6080" class="comment-permalink' title='comment permalink">
+                     8:35am on 8/17/2013                  </a>
+               </span>
+            </p>
+         </div>
+<p>Oh, and I should note that using <a href="http://johnmacfarlane.net/pandoc/" onclick="javascript:_gaq.push(['_trackEvent','outbound-comment','http://johnmacfarlane.net']);" rel="nofollow">Pandoc</a>, you can export directly to Word and even use another document as a template so you can have the desired formatting from the get-go. Likewise with LaTeX/PDF, though I&#8217;ve yet to get that set up. I <em>highly</em> recommend Pandoc if you&#8217;re going to be doing a lot of Markdown stuff.</p>
+<a class='comment-reply-link' href='indexaa22.html?replytocom=6080#respond' onclick='return addComment.moveForm("comment-6080", "6080", "respond", "1056")'>Offer a rejoinder&darr;</a>      </article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment-li" id="comment-li-6765">
+      <article class="comment" id="comment-6765">
+         <div class="comment-avatar">
+            <img alt='' src='http://1.gravatar.com/avatar/5c1bab572029f856ec440f1f9e2cee12?s=82&amp;d=identicon&amp;r=G' class='avatar avatar-82 photo' height='82' width='82' />         </div>
+         <div class="comment-meta">
+            <p>
+                              <span>Dawood thought to say:</span>
+                              <span class="comment-date">
+                  <a href="index.html#comment-6765" class="comment-permalink' title='comment permalink">
+                     4:44pm on 9/6/2013                  </a>
+               </span>
+            </p>
+         </div>
+<p>That was an amazing post, and gives me hope that I could actually write my dissertation using Markdown! I currently do something similar to you for footnotes (although put them immediately after I&#8217;ve finished the paragraph they are found in so I don&#8217;t forget!), and even use the Dropbox text editor to type on my phone whilst on the train to and from school. It&#8217;s incredibly useful!</p>
+<p>My problem, however, is how to transform the Markdown footnotes into proper Word footnotes. How did you manage to overcome this issue? I am using Windows (unfortunately it&#8217;s what my school uses), and my supervisors etc. are stuck using Word and Office for their writing, so sending them things in pure Markdown will be unsuitable.</p>
+<a class='comment-reply-link' href='indexf955.html?replytocom=6765#respond' onclick='return addComment.moveForm("comment-6765", "6765", "respond", "1056")'>Offer a rejoinder&darr;</a>      </article>
+
+<ul class="children">
+   <li class="comment-li" id="comment-li-6769">
+      <article class="comment" id="comment-6769">
+         <div class="comment-avatar">
+            <img alt='' src='http://1.gravatar.com/avatar/198e1680db09d3409ec24028348ad6eb?s=82&amp;d=identicon&amp;r=G' class='avatar avatar-82 photo' height='82' width='82' />         </div>
+         <div class="comment-meta">
+            <p>
+                              <span><a href="../../index.html" class="comment-author-link">Chris Krycho</a> thought to say:</span>
+                              <span class="comment-date">
+                  <a href="index.html#comment-6769" class="comment-permalink' title='comment permalink">
+                     7:22pm on 9/6/2013                  </a>
+               </span>
+            </p>
+         </div>
+<p>Excellent&#8212;glad to have been of some assistance!</p>
+<p>Your best bet for converting to Word is using <a href="http://johnmacfarlane.net/pandoc/" onclick="javascript:_gaq.push(['_trackEvent','outbound-comment','http://johnmacfarlane.net']);" rel="nofollow">pandoc</a>, which lets you export to .docx among a variety of other formats. (Since you&#8217;re using it for academia, you may also be interested in looking at how it exports to LaTeX&#8212;very handy.) It&#8217;s a command line tool, but even if you&#8217;re not super comfortable there, it&#8217;s pretty easy to use.</p>
+<p>To use pandoc to generate a Word document (with nicely formatted footnotes, smart typography like curly quotes, em- and en-dashes, and so on), you can just run the command <code>pandoc &lt;input document(s)&gt; -S -o my_word_doc.docx</code> at the command line. As documented <a href="http://johnmacfarlane.net/pandoc/installing.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-comment','http://johnmacfarlane.net']);" rel="nofollow">here</a>, pandoc works on all major platforms, and the <a href="http://johnmacfarlane.net/pandoc/README.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-comment','http://johnmacfarlane.net']);" rel="nofollow">documentation</a> is <em>excellent</em> and very thorough.</p>
+<p>A couple notes that you may find helpful:</p>
+<ul>
+<li>Make sure you add a couple blank lines at the bottom of each file if you combine multiple files; pandoc just combines them all before running its conversion, so without that white space the last line in one file with run right into the first line in the next file. This can cause all sorts of trouble!<br />
+For the same reason, if you do use separate documents (say, for chapters), you will need to make a top-level distinction in footnotes, similar to how I did in this post, for pandoc to distinguish between them successfully. If you have <code>[^A-1]</code> in two documents, it will grab the footnote text from the first one and use that for both pieces. Obviously not what you want.</li>
+<li>I created a <a href="http://office.microsoft.com/en-us/word-help/make-changes-to-a-quick-style-set-HA010201147.aspx" onclick="javascript:_gaq.push(['_trackEvent','outbound-comment','http://office.microsoft.com']);" rel="nofollow">Quick Style set</a> in Word so that I can generate a document and have it styled the way I want pretty much immediately. There is also an option with pandoc to supply a reference document, the styles of which will be applied to the document in question, <code>--reference-docx=&lt;path to reference doc&gt;</code>. There&#8217;s a bug with that on Mac, but I believe it works correctly on Windows from what the pandoc developer told me.</li>
+<li>You can also customize the templates for other kinds of output (like LaTeX templates, which is what I&#8217;ve used to generate PDFs like the one on <a href="../../theology/will-of-god/index.html"  rel="nofollow">this page</a>). That probably won&#8217;t matter to you much at this stage, but it&#8217;s nice to know.</li>
+</ul>
+<p>Let me know if there&#8217;s any other questions I can answer, and Godspeed on your dissertation!</p>
+<a class='comment-reply-link' href='index45ff.html?replytocom=6769#respond' onclick='return addComment.moveForm("comment-6769", "6769", "respond", "1056")'>Offer a rejoinder&darr;</a>      </article>
+
+<ul class="children">
+   <li class="comment-li" id="comment-li-6771">
+      <article class="comment" id="comment-6771">
+         <div class="comment-avatar">
+            <img alt='' src='http://1.gravatar.com/avatar/5c1bab572029f856ec440f1f9e2cee12?s=82&amp;d=identicon&amp;r=G' class='avatar avatar-82 photo' height='82' width='82' />         </div>
+         <div class="comment-meta">
+            <p>
+                              <span>Dawood thought to say:</span>
+                              <span class="comment-date">
+                  <a href="index.html#comment-6771" class="comment-permalink' title='comment permalink">
+                     8:31pm on 9/6/2013                  </a>
+               </span>
+            </p>
+         </div>
+<p>Thanks for your quick response!</p>
+<p>I&#8217;ve been playing around with Pandoc and MultiMarkdown for a little while now, and think it might actually be more useful for long documents to use the inline footnote function (although that does, of course, mess with word count targets and the like, which would need to be adjusted). If you&#8217;ve not come across it, you can just use <code>^[Inline footnote text here.]</code> directly where you want to enter the footnote in the body text, without anything else required.</p>
+<p>I&#8217;ve tried this with some longish documents (conference papers), and it seems to work perfectly, although I haven&#8217;t as yet tried linking multiple documents together in Pandoc.</p>
+<a class='comment-reply-link' href='indexaf65.html?replytocom=6771#respond' onclick='return addComment.moveForm("comment-6771", "6771", "respond", "1056")'>Offer a rejoinder&darr;</a>      </article>
+
+<ul class="children">
+   <li class="comment-li" id="comment-li-6773">
+      <article class="comment" id="comment-6773">
+         <div class="comment-avatar">
+            <img alt='' src='http://1.gravatar.com/avatar/198e1680db09d3409ec24028348ad6eb?s=82&amp;d=identicon&amp;r=G' class='avatar avatar-82 photo' height='82' width='82' />         </div>
+         <div class="comment-meta">
+            <p>
+                              <span><a href="../../index.html" class="comment-author-link">Chris Krycho</a> thought to say:</span>
+                              <span class="comment-date">
+                  <a href="index.html#comment-6773" class="comment-permalink' title='comment permalink">
+                     8:43pm on 9/6/2013                  </a>
+               </span>
+            </p>
+         </div>
+<p>Ah, I had not noted that Pandoc supported that. Very handy, and yes, I think that especially for long documents that should be extremely helpful&#8212;not least because then you don&#8217;t have to worry about managing the numbers yourself. I expect I may take advantage of that myself next time I&#8217;m writing a paper like this, so thanks for passing it along.</p>
+<p>Now, if I can just get the folks at Byword to add support for it in their document previews, I&#8217;ll be <em>set</em>.</p>
+<a class='comment-reply-link' href='index003e.html?replytocom=6773#respond' onclick='return addComment.moveForm("comment-6773", "6773", "respond", "1056")'>Offer a rejoinder&darr;</a>      </article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+                  </ul> <!-- comments-ul -->
+                  <div id="respond">
+								<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title"><h2>Your rejoinder to <a href="#comment-6773">Chris Krycho</a></h2> <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond">Opt for silence instead&uarr;</a></small></h3>
+									<form action="http://chriskrycho.com/web/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="require-contact-info">Anonymity is <em>most</em> unhelpful. Please identify yourself!</p><p class="email-anonymity">(Your email will not be published.)</p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>												<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Fire away!" />
+							<input type='hidden' name='comment_post_ID' value='1056' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='6773' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="ad37dbfd35" /></p><!-- BEGIN: subscribe to comments reloaded --><p><label for='subscribe-reloaded'><input style='width:30px' type='checkbox' name='subscribe-reloaded' id='subscribe-reloaded' value='yes' /> Notify me of followup comments via e-mail. You can also <a href='../comment-subscriptions/index87d8.html?srp=1056&amp;sra=s'>subscribe</a> without commenting.</label></p><!-- END: subscribe to comments reloaded -->					</form>
+							</div><!-- #respond -->
+			        <script type="text/javascript">
+            jQuery(document).ready(function () {
+                jQuery('#commentform').submit(function () {
+                    _gaq.push(
+                            ['_setAccount', 'UA-10702079-9'],
+                            ['_trackEvent', 'comment', 'submit']
+                    );
+                });
+            });
+        </script>
+		<p class="allowed-text">You may use <a href="https://help.github.com/articles/github-flavored-markdown" target="_blank">GitHub-flavored Markdown</a> and/or these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:<br/><code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>                  </div>
+               </footer>
+
+         </article>            <nav id="page-nav">
+         <ul>
+            <li class="newer">
+               <a href="../youtube-video-name-trick/index.html" rel="next">&larr; back to the future</a>            </li>
+            <li class="home"><a href="../index.html">&ndash;Home&ndash;</a></li>
+            <li class="older">
+               <a href="../current-plans/index.html" rel="prev">into the past &rarr;</a>            </li>
+         </ul>
+      </nav>
+         </div>      <footer id="site-footer">
+
+            <nav id="supersite-nav" class="footer-block">
+         <h1>Navigate</h1>
+         <ul>
+            <li>
+               <h2>Search this site:</h2>
+               
+<form role="search" class="customform" method="get" action="http://chriskrycho.com/web/">
+   <input type="text" value="" name="search" id="search" placeholder="discover something"/>
+   <input type="submit" id="searchsubmit" value="&rarr;" />
+</form>            </li>
+            <li>
+               <a href="../../index.html">Home</a><br/>
+               <i>Creativity, reflection, & passionate endeavors.</i>
+            </li>
+            <li>
+               <a href="../index.html">Designgineering</a><br/>
+               <i>Web design & development.</i>
+            </li>
+            <li>
+               <a href="../../theology/index.html">Ardent Fidelity</a><br/>
+               <i>Reflections on a Christ-centered life.</i>
+            </li>
+            <li>
+               <a href="../../art/index.html">Ars Artis</a><br/>
+               <i>Creations & musings on creativity.</i>
+            </li>
+            <li>
+               <a href="../../family/index.html">From the Hearth</a><br/>
+               <i>Updates on our growing family.</i>
+            </li>
+         </ul>
+      </nav>
+
+      <section id="connect" class="footer-block">
+         <h1>Connect</h1>
+         <ul>
+            <li><h2>Opt for emails:</h2>			<div class="textwidget"><form class="customform" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=chriskrycho/web', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+<input type="text" name="email" placeholder="your.name@domain.com"/>
+<input type="hidden" value="chriskrycho/web" name="uri"/>
+<input type="hidden" name="loc" value="en_US"/>
+<input type="submit" value="&rarr;" />
+</form></div>
+		</li>            <li>
+               <a href="../feed/index.html" title="RSS feed" target="_blank">RSS/Atom</a><br/>
+               <i>To the feed reader, quick!</i>
+            </li>
+            <li>
+               <a href='https://alpha.app.net/chriskrycho' rel='me' data-type='follow' data-user-id='@chriskrycho' title="app.net/chriskrycho">App.net</a><br/>
+               <i>Less noisy, more characters.</i>
+            </li>
+            <li>
+               <a href="#" class="email-link" title="chris|@|chriskrycho|.|com" target="_blank">Email</a><br/>
+               <i>Send me a letter. But without the paper.</i>
+            </li>
+            <li>
+               <a href="http://www.facebook.com/chriskrycho" title="facebook.com/chriskrycho" target="_blank">Facebook</a><br/>
+               <i>Fun party meets family get-together.</i>
+            </li>
+            <li>
+               <a href="https://plus.google.com/100517719789069874571/" title="Google+ profile" target="_blank">Google+</a><br/>
+               <i>The nerdy new kid on the block.</i>
+            </li>
+            <li>
+               <a href="http://www.goodreads.com/user/show/3165223-chris-krycho" title="Goodreads profile" target="_blank">Goodreads</a><br/>
+               <i>A bookshelf, in cyberspace!</i>
+            </li>
+            <li>
+               <a href="http://www.linkedin.com/in/chriskrycho" title="LinkedIn Profile" target="_blank">LinkedIn</a><br/>
+               <i>A place for professional professionals.</i>
+            </li>
+            <li>
+               <a href="http://nosegue.tumblr.com/">No Segue</a><br/>
+               <i>A Tumblr about technology</i>
+            </li>
+            <li>
+               <a href="http://www.twitter.com/chriskrycho" title="twitter.com/chriskrycho" target="_blank">Twitter</a><br/>
+               <i>Your spastic journalist neighbors.</i>
+            </li>
+            <li>
+               <a href="http://about.me/chriskrycho" title="About.me profile" target="_blank">About.me</a><br/>
+               <i>Biographical sundries & links galore!</i>
+            </li>
+            <li>
+               <a href="http://www.runningahead.com/logs/2667b469aeda433382cbcc8ed413d964/profile" target="_blank">RunningAhead</a><br/>
+               <i>I run and run and run some more.</i>
+            </li>
+         </ul>
+      </section>
+
+      <section id="read" class="footer-block">
+         <h1>Read</h1>
+         <div class="eg-archives-columns"><ul>	<li><a href='../2013/12/index.html'>December 2013</a></li>
+	<li><a href='../2013/10/index.html'>October 2013</a></li>
+	<li><a href='../2013/09/index.html'>September 2013</a></li>
+	<li><a href='../2013/08/index.html'>August 2013</a></li>
+	<li><a href='../2013/06/index.html'>June 2013</a></li>
+	<li><a href='../2013/05/index.html'>May 2013</a></li>
+	<li><a href='../2013/03/index.html'>March 2013</a></li>
+	<li><a href='../2013/02/index.html'>February 2013</a></li>
+	<li><a href='../2013/01/index.html'>January 2013</a></li>
+	<li><a href='../2012/12/index.html'>December 2012</a></li>
+	<li><a href='../2012/11/index.html'>November 2012</a></li>
+</ul><ul>
+	<li><a href='../2012/10/index.html'>October 2012</a></li>
+	<li><a href='../2012/09/index.html'>September 2012</a></li>
+	<li><a href='../2012/08/index.html'>August 2012</a></li>
+	<li><a href='../2012/07/index.html'>July 2012</a></li>
+	<li><a href='../2012/06/index.html'>June 2012</a></li>
+	<li><a href='../2012/05/index.html'>May 2012</a></li>
+	<li><a href='../2012/04/index.html'>April 2012</a></li>
+	<li><a href='../2012/03/index.html'>March 2012</a></li>
+	<li><a href='../2012/02/index.html'>February 2012</a></li>
+	<li><a href='../2012/01/index.html'>January 2012</a></li></ul></div>      </section>
+
+      <section id="discuss" class="footer-block">
+         <h1>Discuss</h1>
+         <h2></h2><ul><li><a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html#comment-16469">Josh, another bit of follow-up. As noted in my prev...</a> &ndash; Chris Krycho <i>on <a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html">Python—homebrew, virtualenv, and OS X Framework builds</a></i></li><li><a href="../modular-scales-fantastic-but-dont-overdo-it/index.html#comment-15318">z6305
+
+c17217
+
+R10941
+</a> &ndash; VedqueltWeree <i>on <a href="../modular-scales-fantastic-but-dont-overdo-it/index.html">Modular scales: fantastic, but don't overdo it</a></i></li><li><a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html#comment-15073">My pleasure. However, fair warning: I just discover...</a> &ndash; Chris Krycho <i>on <a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html">Python—homebrew, virtualenv, and OS X Framework builds</a></i></li><li><a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html#comment-14916">Thank you.  This was a source of much frustration.
+...</a> &ndash; Josh Baylin <i>on <a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html">Python—homebrew, virtualenv, and OS X Framework builds</a></i></li><li><a href="../jira-confluence-intranets-and-windows-firewall/index.html#comment-11602">Thank you so much for this awesome post! I've been ...</a> &ndash; Henrik Olsen <i>on <a href="../jira-confluence-intranets-and-windows-firewall/index.html">JIRA, Confluence, Intranets and Windows Firewall</a></i></li></ul>      </section>
+
+      <section id="colophon" class="colophon footer-block">
+         <h1>Colophon</h1>
+         <p>
+            &copy;2012&ndash;2014 Chris Krycho         </p>
+               </section>
+   </footer>
+   <!-- MathJax Latex Plugin installed: Disabled as no shortcodes on this page --><script src="http://bible.logos.com/jsapi/Referencetagging.js" type="text/javascript"></script>
+<script type="text/javascript">
+			Logos.ReferenceTagging.lbsBibleVersion = "";
+			Logos.ReferenceTagging.lbsLibronixBibleVersion = "";
+									Logos.ReferenceTagging.lbsLibronixLinkIcon = "";
+			Logos.ReferenceTagging.lbsNoSearchClassNames = [ "commentlist" ];			Logos.ReferenceTagging.lbsUseTooltip = false;			Logos.ReferenceTagging.lbsNoSearchTagNames = [  ];
+															Logos.ReferenceTagging.tag();
+		</script>
+   <script src='https://d2zh9g63fcvyrq.cloudfront.net/adn.js'></script>
+</body>
+
+<!-- Mirrored from chriskrycho.com/web/markdown-and-academic-writing/?replytocom=6773 by HTTrack Website Copier/3.x [XR&CO'2013], Wed, 01 Jan 2014 03:23:50 GMT -->
+</html>

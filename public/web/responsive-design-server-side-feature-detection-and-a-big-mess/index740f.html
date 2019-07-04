@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en-US" class="no-wp-admin">
+
+<!-- Mirrored from chriskrycho.com/web/responsive-design-server-side-feature-detection-and-a-big-mess/?replytocom=51 by HTTrack Website Copier/3.x [XR&CO'2013], Wed, 01 Jan 2014 03:24:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+   <title>
+      Responsive Design, Server-Side Feature Detection, and a Big Mess &raquo; Designgineering &raquo; Chris Krycho   </title>
+
+   <!-- Set document meta -->
+   <meta charset="UTF-8" />
+
+   <!-- Mobile devices should view the screen at their native width -->
+   <meta name='viewport' content='width=device-width,initial-scale=1.0' />
+
+   <!-- Styles -->
+   <link rel="stylesheet" type="text/css" media="screen" href="../wp-content/themes/ck-web/style.css" />
+   <link rel="stylesheet" type="text/css" media="screen" href="../../utilities/tooltip/jquery.tooltip.css"
+
+   <!-- Authorship -->
+   <link rel="author" href="https://plus.google.com/u/0/100517719789069874571/" />
+   
+   <!-- All Javascript (including JQuery) functionality -->
+   <script type="text/javascript" src="http://use.typekit.com/aqh6miw.js"></script>
+
+   <!-- jQuery -->
+   <script type="text/javascript" src="../../utilities/jquery.min.js"></script>
+   <script type="text/javascript" src="../../utilities/tooltip/jquery.tooltip.min.js"></script>
+   <script type="text/javascript" src="../../utilities/custom-functions.js"></script>
+
+   <!-- IE Fixes -->
+   <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <link rel="stylesheet" type="text/css" media="screen" href="/styles/ie.css" />
+   <![endif]-->
+   
+   
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.22 - http://yoast.com/wordpress/seo/ -->
+<meta name="description" content="Responsive design schemes that use user-agent detection instead of web standards risk preventing agnostic access to site data."/>
+<link rel="canonical" href="index.html" />
+<link rel="author" href="https://plus.google.com/100517719789069874571/"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@chriskrycho"/>
+<meta name="twitter:domain" content="Designgineering"/>
+<meta name="twitter:creator" content="@chriskrycho"/>
+<meta name="twitter:description" content="Responsive design schemes that use user-agent detection instead of web standards risk preventing agnostic access to site data."/>
+<meta name="twitter:title" content="Responsive Design, Server-Side Feature Detection, and a Big Mess"/>
+<meta name="twitter:url" content="http://chriskrycho.com/web/responsive-design-server-side-feature-detection-and-a-big-mess/"/>
+<!-- / Yoast WordPress SEO plugin. -->
+
+
+            <script type="text/javascript">//<![CDATA[
+            // Google Analytics for WordPress by Yoast v4.3.3 | http://yoast.com/wordpress/google-analytics/
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-10702079-9']);
+				            _gaq.push(['_setCustomVar',1,'tags','best-practices development responsive-design standards web-a',3],['_setCustomVar',2,'year','2012',3],['_setCustomVar',3,'category','posts',3],['_trackPageview']);
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+            //]]></script>
+			<link rel="alternate" type="application/rss+xml" title="Designgineering &raquo; Responsive Design, Server-Side Feature Detection, and a Big Mess Comments Feed" href="feed/index.html" />
+<link rel='stylesheet' id='wp-syntax-css-css'  href='../wp-content/plugins/wp-syntax/css/wp-syntax5152.css?ver=1.0' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-includes/js/comment-reply.mincaf6.js?ver=3.9-alpha'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery3e5a.js?ver=1.10.2'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min1576.js?ver=1.2.1'></script>
+<meta name="generator" content="WordPress 3.9-alpha" />
+<script type="text/javascript" src="../wp-content/plugins/wp-syntax-effects/js/wp-syntax-effects.js"></script>
+</head>
+<body>
+<div id="decorative-wrapper">
+
+
+   <!--[if lt IE 9]>
+   <div id="nav-wrapper">
+   <![endif]-->
+   
+   <nav id="site-nav" class="menu-main-nav-container"><ul id="menu-main-nav" class="menu"><li id="menu-item-12" class="level-1 menu-item menu-item-type-post_type menu-item-object-page menu-item-12"><a href="../work/index.html" >Work</a></li>
+<li id="menu-item-219" class="level-1 menu-item menu-item-type-post_type menu-item-object-page menu-item-219"><a href="../tools/index.html" >Tools</a></li>
+<li id="menu-item-858" class="level-1 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-858"><a href="../projects/index.html" >Projects</a></li>
+<li id="menu-item-11" class="level-1 hide menu-item menu-item-type-post_type menu-item-object-page menu-item-11"><a href="../process/index.html" >Process</a></li>
+<li id="menu-item-10" class="level-1 menu-item menu-item-type-post_type menu-item-object-page menu-item-10"><a href="../web-professionals/index.html" >Web Professionals</a></li>
+</ul></nav>   
+   <!--[if lt IE 9]>
+   </div>
+   <![endif]-->
+
+   <header id="site-header">
+      <h1><a href="../index.html">Designgineering</a></h1>
+      <h2><span class="italic">web design &amp; development <span class="break">by <a href='../../index.html'>Chris Krycho</a></span></span></h2>
+   </header>
+   
+         
+               <article>
+
+            <header>
+               <h1>
+                  Responsive Design, Server-Side Feature Detection, and a Big Mess               </h1>
+            </header>
+
+                        <div class="content-meta">
+
+                              <p class="pubdate">Published: <a href="index.html" class="permalink">February 23, 2012</a></p>
+
+                              <p class="comments">Comments: <a href="index.html#comments" class="permalink">5</a></p>
+
+                              <p class="categories">Filed under: <a href="../posts/index.html" title="View all posts in Posts" rel="category tag">Posts</a></p>
+
+                              <p class="tags">Topics: <a href="../topics/best-practices/index.html" rel="tag">best practices</a>, <a href="../topics/development/index.html" rel="tag">development</a>, <a href="../topics/responsive-design/index.html" rel="tag">responsive design</a>, <a href="../topics/standards/index.html" rel="tag">standards</a>, <a href="../topics/web-applications/index.html" rel="tag">web applications</a>, <a href="../topics/web-design/index.html" rel="tag">web design</a></p>
+                           </div>
+            
+                        <div class="content hyphenate">
+
+               <p>A couple days ago, Jason Gigsby (<a href="https://twitter.com/#!/grigs" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://twitter.com']);" title="@grigs on Twitter" target="_blank">@grigs</a>) highlighted <a href="http://www.dmolsen.com/mobile-in-higher-ed/2012/02/21/ress-and-the-evolution-of-responsive-web-design/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.dmolsen.com']);" title="RESS, Server-Side Feature-Detection and the Evolution of Responsive Web Design" target="_blank">this post</a> by Dave Olsen on responsive design from the server-side. The biggest thing that caught my attention was his focus on user-agent detection for altering the delivery of content.</p>
+<p>There is some sensible stuff in there; it&#8217;s worth your time. In particular, I can see the value in delivering different kinds of resources to different targets, especially in the case of video or images, where resolution and bandwidth may be constrained. <span id="more-408"></span>That&#8217;s a big part of what is driving the <a href="http://www.w3.org/community/respimg/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.w3.org']);" title="W3 Community: Responsive Images" target="_blank">responsive <code>&lt;picture&gt;</code> discussion</a>, in fact. But a heavy emphasis or long-term reliance on user-agent detection rubs me the wrong way.</p>
+<p>Front end designers and developers have in the last few years finally stopped relying on user-agent detection to make their sites behave in particular ways. That&#8217;s a <em>good</em> thing; user-agent detection is often unreliable and finicky; it&#8217;s certainly in a constant state of flux. That&#8217;s only going to be more true as more mobile browsers allow users to set their user agent, and as browsers for mobile and desktops converge, <i class="language">a la</i> Chrome for Android.</p>
+<p>There may be times when user-agent detection is an appropriate strategy on the back end &#8211; I&#8217;m not sure what they might be, but I&#8217;m willing to allow that there are situations in which it may make sense. However, Olsen was explicitly talking about front-end design, albeit from the perspective of back-end development. When someone starts talking about serving different content based on user-agent, I can&#8217;t see that working out well for users in the long run. Olsen himself may be a good enough developer to avoid doing stupid things with user-agent detection, but are all other back end devs equally disciplined? In other words, it may be just fine for him, but <em>evangelizing</em> for the practice may land us all in a world of trouble down the line. After all, <a href="http://www.chriskrycho.com/web/posts/death-to-vendor-prefixes/"  title="Death to vendor prefixes!" target="_blank">it&#8217;s happened before</a>.</p>
+<p>Then I read through the discussion, and this line in <a href="http://www.dmolsen.com/mobile-in-higher-ed/2012/02/21/ress-and-the-evolution-of-responsive-web-design/#comment-2744" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.dmolsen.com']);" title="Ronan Cremin @xbs">Ronan Cremin&#8217;s comment</a> stuck out:</p>
+<blockquote><p>A great mobile experience needs to be designed for mobile from the outset, not a rejiggered version of an existing site. Any mobilization solution that utilizes the same basic chunk of HTML delivered to desktop and mobile is missing an opportunity.
+</p></blockquote>
+<p>The first half of that is quite right, of course; a great mobile experience <em>does</em> need to be designed for mobile from the outset, and rejiggering an existing site will never be optimal. (It is, I should note, still a good step in the right direction for websites whose proprietors can&#8217;t afford an immediate full redesign.) I&#8217;m increasingly a proponent of the &#8220;mobile first&#8221; paradigm of design: I consider mobile from the very beginning of my design flow, and it&#8217;s actually the first CSS layout I build. Media queries progressively enhance the functionality of larger screens just as other CSS properties progressively enhance the functionality of more capable browsers.</p>
+<p>The second half of this quote runs right up against the same thing that was making me uncomfortable in Olsen&#8217;s article, though. I <em>never</em> want to prevent a user from getting access to certain content simply because they&#8217;re on a smaller screen (or an alternate format like a screenreader; it&#8217;s too easy to overlook the accessibility concerns inherent in discussions like this). I <em>always</em> want to deliver the same content, however vast the differences in presentation.</p>
+<p>There is no question that data can and often should be displayed differently to a user based on the size of their screen, their bandwidth, etc., especially in the case of web <em>applications</em> as opposed to ordinary websites. Reflowing the content, applying alternate styles more friendly to touch, finding ways to deal with perceived relative importance as proportions change &#8211; these are all good and even necessary ways of responding to the vast differences between a smartphone, a 15&#8243; notebook and a 27&#8243; 1080p monitor. Different contexts may demand different presentation &#8211; but we should always let the user get the same data.</p>
+<p>Returning for a moment to the ongoing discussion of a proposed <code>&lt;picture&gt;</code> element, one of the concerns I raised in a comment that has since been raised by one of the leaders of the project is guaranteeing that the user <em>can</em> get to the highest resolution of the image, even if it&#8217;s not the image originally loaded by the page. If I&#8217;m on my phone, I may want a site to save me bandwidth and time by loading a lower-resolution image that is appropriate to my screen. But I don&#8217;t want this to prevent me from getting to that high-resolution image if I decide it would make a great wallpaper.</p>
+<p>Schemes that rely on user-agent detection, instead of fixed standards, seem to run a much greater risk of preventing agnostic access to all the data on the site. For the record, I think that&#8217;s a bad thing. Again, there may be ways and places in which user-agent detection is helpful. Some of the stopgap solutions people are putting in place while browsers catch up to the needs of responsive design are great examples. But these should not be understood to be long-term patterns or solutions.</p>
+<p>Rather, we should be pushing for better browser capabilities and web standards to support responsive design. If we need bandwidth data, we should ask the browsers to provide it. If we need support for a responsive image element, we should ask the browsers to provide it. The beauty of web standards is that if you think of something beneficial and lay out it carefully, you can submit it and see it get traction. Driving the web towards standards-based approaches works in everyone&#8217;s favor.</p>
+<p>All that said, I&#8217;m still a newbie in a lot of ways, so hit me with your best arguments why I&#8217;m wrong. We&#8217;ll all come out smarter, perhaps me most of all.</p>
+<p><ins datetime="2012-02-23T14:01:02+00:00"><strong>Edit:</strong> I just finished reading an article Olsen linked, <a href="http://www.lukew.com/ff/entry.asp?1392" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.lukew.com']);" target="_blank" title="RESS: Responsive Design + Server Side Components">RESS: Responsive Design + Server Side Components</a>, by Luke Wroblewski. The original emphasis was much more on web applications and vastly customized templates for design. This article, with its narrower focus, I like a bit better, but I still have some significant concerns with some of the ideas he tosses out (like custom url structures). I can potentially see value in user-agent detection for templating, but ultimately I still think it&#8217;s a stopgap measure.</ins></p>
+<p><ins datetime="2012-02-23T14:01:02+00:00">In any case, the design community should invest significantly more time in thinking about how to handle responsive <em>templating</em>, which is what Luke W&#8217;s article is really driving at.</ins></p>
+
+            </div>
+
+                           <footer id="comments">
+                  <h3 class="discussion-header">Discussion</h3>
+                  <ul class="comments-ul">
+
+   <li class="comment-li" id="comment-li-48">
+      <article class="comment" id="comment-48">
+         <div class="comment-avatar">
+            <img alt='' src='http://1.gravatar.com/avatar/fd31c83c788b7d57277e44c518232b4e?s=82&amp;d=identicon&amp;r=G' class='avatar avatar-82 photo' height='82' width='82' />         </div>
+         <div class="comment-meta">
+            <p>
+                              <span><a href="http://dmolsen.com/" class="comment-author-link">Dave Olsen</a> thought to say:</span>
+                              <span class="comment-date">
+                  <a href="index.html#comment-48" class="comment-permalink' title='comment permalink">
+                     10:34am on 2/23/2012                  </a>
+               </span>
+            </p>
+         </div>
+<p>Chris-</p>
+<p>First off, thanks much for continuing the discussion. Second, I think my original post must not have been clear enough. The whole point of server-side feature-detection is to offer a way forward for the responsive templating concept that you seem to think might have value. Is there some user-agent detection stuff in there? Yes. Is user-agent detection meant to be the be-all-and-end-all for making decisions regarding how features are templated? No. Is user-agent detection meant to provide completely different layouts/templates to various classes of devices? Again, no. When I say &#8220;An Evolution of Responsive Web Design&#8221; I really mean that. What I talked about is to make responsive layouts smarter as opposed to throwing those layouts away. If you haven&#8217;t, please poke through <a href="http://detector.dmolsen.com/demo/mustache/" onclick="javascript:_gaq.push(['_trackEvent','outbound-comment','http://detector.dmolsen.com']);" rel="nofollow">the demo</a>, <a href="https://github.com/dmolsen/Detector/wiki/Templating-with-Detector-&amp;-Mustache-Tutorial" onclick="javascript:_gaq.push(['_trackEvent','outbound-comment','http://github.com']);" rel="nofollow">tutorial</a>, and <a href="https://github.com/dmolsen/Detector/tree/master/web/demo/mustache/templates" onclick="javascript:_gaq.push(['_trackEvent','outbound-comment','http://github.com']);" rel="nofollow">template code</a>.</p>
+<p>In my scheme user-agent detection, in the traditional sense, is, again, only meant to be one of the data points that helps server-side responsive templating work. Unfortunately, in <a href="http://detector.dmolsen.com/demo/mustache/" onclick="javascript:_gaq.push(['_trackEvent','outbound-comment','http://detector.dmolsen.com']);" rel="nofollow">the demo</a> I created it looks like it&#8217;s some huge part but it really can be a minor section and, frankly, possibly left out altogether. Server-side feature-detection is about just that, accessing browser features but on the server. A user-agent string is used as a key and can store a <a href="http://detector.dmolsen.com/" onclick="javascript:_gaq.push(['_trackEvent','outbound-comment','http://detector.dmolsen.com']);" rel="nofollow">vast trove of browser data</a> via Modernizr. Why punt that kind of decision making onto the browser (and JavaScript) to provide polyfill logic for including bits of content and, most importantly, media if you don&#8217;t have to? If you find value in front-end devs moving towards feature-detection I&#8217;m surprised you&#8217;d take a dim view of server-side devs moving in a similar direction even if I might suggest that their is still some amount of value to the data found in a user-agent string. </p>
+<p>As you note, at some point tools need to be built to overcome the gaps we have between what we need to support and what those end-points (e.g. browsers) actually support. The downside of standards is that it takes a long-time for them to catch up with what&#8217;s actually happening on the ground. I&#8217;m simply offering a way forward on the back-end for more complicated systems that might want to use RESS and to do it in a smarter way than just user-agent detection until the standards catch-up. I definitely *wasn&#8217;t* suggesting front-end devs pick up user-agent detection or drop what they&#8217;re doing. I&#8217;m not sure one blog post, meant to pull together a number of a different threads and showing a working example, qualifies as evangelizing a long-term solution. <img src="../wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley" /> </p>
+<a class='comment-reply-link' href='indexa3a3.html?replytocom=48#respond' onclick='return addComment.moveForm("comment-48", "48", "respond", "408")'>Offer a rejoinder&darr;</a>      </article>
+
+<ul class="children">
+   <li class="comment-li" id="comment-li-49">
+      <article class="comment" id="comment-49">
+         <div class="comment-avatar">
+            <img alt='' src='http://0.gravatar.com/avatar/c096ed07142659408dc6651f8320acd3?s=82&amp;d=identicon&amp;r=G' class='avatar avatar-82 photo' height='82' width='82' />         </div>
+         <div class="comment-meta">
+            <p>
+                              <span><a href="http://www.chriskrycho.com/" class="comment-author-link">Chris Krycho</a> thought to say:</span>
+                              <span class="comment-date">
+                  <a href="index.html#comment-49" class="comment-permalink' title='comment permalink">
+                     11:06am on 2/23/2012                  </a>
+               </span>
+            </p>
+         </div>
+<p>Thanks for the thoughtful reply. As I read LukeW&#8217;s article and saw what you were responding to and adding to, I realized more the direction you were headed, and I also recognized that I spazzed a little about UA-detection, which is just such bad mojo on the front-end side that I&#8217;ve developed a bit of a Pavlovian reaction, I think. And the comment I quoted actually set me off way more than your article did; I probably should have been a bit clearer in my own article on that point.</p>
+<p>I agree with you that doing server-side detection can have some significant benefits, and between your and Luke&#8217;s examples, I can see the specific places where I might consider doing it myself. My hesitation was in light of the ways I&#8217;ve seen quite a few people doing one of two horrible things:</p>
+<p>(1) Using user-agent detection to deliver completely different content to mobile than to desktop, which drives me nuts as a <em>user</em>, not just as a designer. As I noted in the article, that drives me crazy, and it&#8217;s not ideology in this case &#8211; it&#8217;s the fact that when I pull out my phone, I want to be able to see your whole site. </p>
+<p>(2) Only delivering well-designed content to specific types of browsers. I don&#8217;t know if you caught any of the hubbub about <code>-webkit</code> and vendor prefixing in general over the last week or two, but people have been doing some headdesk-inducing things in terms of optimizing sites for particular vendors, including (at times) relying on UA-detection.</p>
+<p>But you weren&#8217;t arguing for (1) and I don&#8217;t know if you&#8217;d even heard about (2). Serves me right for bringing a bad set of assumptions to the table. Thanks for the gracious response. I look forward to seeing some of the ways we can do templating work responsively, I&#8217;m going to look into Modernizr, and I&#8217;m going to be thinking about ways that a browser could supply meaningful data to the server about itself without necessarily having to reply on the user agent string (which, as LukeW noted in the article you linked originally, is a bit risky).</p>
+<p>I think optimally I&#8217;d really like for a browser to tell the server a few non-trivial pieces of data when it sends its initial request &#8211; things like average bandwidth over the last [x] time, screen info (resolution and DPI at a minimum), touch or cursor oriented, etc. I have no idea how feasible those things are, but it would be fantastic if the server could <em>know</em> those instead of having to trust that the user agent string will allow it to infer that data accurately.</p>
+<a class='comment-reply-link' href='index21e4.html?replytocom=49#respond' onclick='return addComment.moveForm("comment-49", "49", "respond", "408")'>Offer a rejoinder&darr;</a>      </article>
+
+<ul class="children">
+   <li class="comment-li" id="comment-li-50">
+      <article class="comment" id="comment-50">
+         <div class="comment-avatar">
+            <img alt='' src='http://1.gravatar.com/avatar/fd31c83c788b7d57277e44c518232b4e?s=82&amp;d=identicon&amp;r=G' class='avatar avatar-82 photo' height='82' width='82' />         </div>
+         <div class="comment-meta">
+            <p>
+                              <span><a href="http://dmolsen.com/" class="comment-author-link">Dave Olsen</a> thought to say:</span>
+                              <span class="comment-date">
+                  <a href="index.html#comment-50" class="comment-permalink' title='comment permalink">
+                     1:43pm on 2/23/2012                  </a>
+               </span>
+            </p>
+         </div>
+<p>To point #1&#8230; *winces* I&#8217;ve done it. I think that&#8217;s part of the push from my end to find a better way forward. It is wrong to wholly rely on the UA.  As for point #2&#8230; well aware of it but luckily that&#8217;s not my realm on many projects.</p>
+<p>There&#8217;s a <a href="http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2012-February/thread.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-comment','http://lists.whatwg.org']);" rel="nofollow">good thread</a> on the WHATWG listserv about the &#8220;non-trivial pieces of data&#8221; idea.  Like some of the commenters my question would be &#8220;Where do we draw the line?&#8221; and &#8220;Are these features that we build *into* a browser really going to be useful once that browser is actually published?&#8221; Meaning, have we moved on from needing that as a technique by the time they&#8217;re really available.</p>
+<a class='comment-reply-link' href='indexed49.html?replytocom=50#respond' onclick='return addComment.moveForm("comment-50", "50", "respond", "408")'>Offer a rejoinder&darr;</a>      </article>
+
+<ul class="children">
+   <li class="comment-li" id="comment-li-51">
+      <article class="comment" id="comment-51">
+         <div class="comment-avatar">
+            <img alt='' src='http://0.gravatar.com/avatar/c096ed07142659408dc6651f8320acd3?s=82&amp;d=identicon&amp;r=G' class='avatar avatar-82 photo' height='82' width='82' />         </div>
+         <div class="comment-meta">
+            <p>
+                              <span><a href="http://www.chriskrycho.com/" class="comment-author-link">Chris Krycho</a> thought to say:</span>
+                              <span class="comment-date">
+                  <a href="index.html#comment-51" class="comment-permalink' title='comment permalink">
+                     4:21pm on 2/23/2012                  </a>
+               </span>
+            </p>
+         </div>
+<p>I think your comment on (1) summarizes and highlights the challenge here. We <em>do</em> need a better way forward, and particularly when we&#8217;re delivering application (or application-like) functionality, the temptation is there and strong to deliver totally different content. I&#8217;m just persuaded &#8211; both by the ideological arguments put forward by guys like Ethan Marcotte, and by my own personal interactions with sites &#8211; that it&#8217;s not the best way forward. Unfortunately, we haven&#8217;t yet nailed down a single &#8220;best way forward&#8221; yet; I think responsive flow with media queries is part of it, and I think the kinds of things you&#8217;re pushing for with responsive templating are actually a really neat future part of it. (It&#8217;s sometimes easy to forget that &#8220;responsive&#8221; as a general part of design is only a little over a year old. It&#8217;s come a long ways in that time, but it&#8217;s still in its infancy or at most toddlerhood, even when compared to the rest of the web.)</p>
+<p>Thanks for the link; I&#8217;ll read through that. I think the question you&#8217;re raising (and they apparently are) is a good one. There are a few that I don&#8217;t see going away &#8211; bandwidth in particular, but perhaps all of the ones I noted &#8211; but I can also see how easily that sort of thing could get carried away. The last thing we want to do is burden the browsers with implementing things no one will actually use. Use cases like the one you laid out, or the <a href="http://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/" onclick="javascript:_gaq.push(['_trackEvent','outbound-comment','http://www.w3.org']);" rel="nofollow">first couple proposed approaches for <code>&lt;picture&gt;</code></a>, convince me that some of these can and should have a life of their own in the browser. The trick is figuring out <em>which ones</em>.</p>
+<p>Thanks again for provoking a good discussion and helping me suss out these thoughts a bit more carefully. <img src="../wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /> </p>
+<a class='comment-reply-link' href='index740f.html?replytocom=51#respond' onclick='return addComment.moveForm("comment-51", "51", "respond", "408")'>Offer a rejoinder&darr;</a>      </article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="pingback-li">
+      <article class="pingback">
+         <p>
+            Pingback:             <a href="http://www.chriskrycho.com/web/posts/user-agent-detection-will-get-you-in-trouble/" class="pingback-link">
+               User Agent Detection Will Get You In Trouble &raquo; Designgineering &raquo; Chris Krycho at 11:23am on 5/11/2012            </a>
+         </p>
+      </article>
+</li><!-- #comment-## -->
+
+                  </ul> <!-- comments-ul -->
+                  <div id="respond">
+								<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title"><h2>Your rejoinder to <a href="#comment-51">Chris Krycho</a></h2> <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond">Opt for silence instead&uarr;</a></small></h3>
+									<form action="http://chriskrycho.com/web/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="require-contact-info">Anonymity is <em>most</em> unhelpful. Please identify yourself!</p><p class="email-anonymity">(Your email will not be published.)</p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>												<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Fire away!" />
+							<input type='hidden' name='comment_post_ID' value='408' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='51' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="8a50bbe570" /></p><!-- BEGIN: subscribe to comments reloaded --><p><label for='subscribe-reloaded'><input style='width:30px' type='checkbox' name='subscribe-reloaded' id='subscribe-reloaded' value='yes' /> Notify me of followup comments via e-mail. You can also <a href='../comment-subscriptions/indexb4b9.html?srp=408&amp;sra=s'>subscribe</a> without commenting.</label></p><!-- END: subscribe to comments reloaded -->					</form>
+							</div><!-- #respond -->
+			        <script type="text/javascript">
+            jQuery(document).ready(function () {
+                jQuery('#commentform').submit(function () {
+                    _gaq.push(
+                            ['_setAccount', 'UA-10702079-9'],
+                            ['_trackEvent', 'comment', 'submit']
+                    );
+                });
+            });
+        </script>
+		<p class="allowed-text">You may use <a href="https://help.github.com/articles/github-flavored-markdown" target="_blank">GitHub-flavored Markdown</a> and/or these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:<br/><code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>                  </div>
+               </footer>
+
+         </article>            <nav id="page-nav">
+         <ul>
+            <li class="newer">
+               <a href="../a-plea-for-open-data/index.html" rel="next">&larr; back to the future</a>            </li>
+            <li class="home"><a href="../index.html">&ndash;Home&ndash;</a></li>
+            <li class="older">
+               <a href="../the-danger-of-search-engine-optimization/index.html" rel="prev">into the past &rarr;</a>            </li>
+         </ul>
+      </nav>
+         </div>      <footer id="site-footer">
+
+            <nav id="supersite-nav" class="footer-block">
+         <h1>Navigate</h1>
+         <ul>
+            <li>
+               <h2>Search this site:</h2>
+               
+<form role="search" class="customform" method="get" action="http://chriskrycho.com/web/">
+   <input type="text" value="" name="search" id="search" placeholder="discover something"/>
+   <input type="submit" id="searchsubmit" value="&rarr;" />
+</form>            </li>
+            <li>
+               <a href="../../index.html">Home</a><br/>
+               <i>Creativity, reflection, & passionate endeavors.</i>
+            </li>
+            <li>
+               <a href="../index.html">Designgineering</a><br/>
+               <i>Web design & development.</i>
+            </li>
+            <li>
+               <a href="../../theology/index.html">Ardent Fidelity</a><br/>
+               <i>Reflections on a Christ-centered life.</i>
+            </li>
+            <li>
+               <a href="../../art/index.html">Ars Artis</a><br/>
+               <i>Creations & musings on creativity.</i>
+            </li>
+            <li>
+               <a href="../../family/index.html">From the Hearth</a><br/>
+               <i>Updates on our growing family.</i>
+            </li>
+         </ul>
+      </nav>
+
+      <section id="connect" class="footer-block">
+         <h1>Connect</h1>
+         <ul>
+            <li><h2>Opt for emails:</h2>			<div class="textwidget"><form class="customform" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=chriskrycho/web', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+<input type="text" name="email" placeholder="your.name@domain.com"/>
+<input type="hidden" value="chriskrycho/web" name="uri"/>
+<input type="hidden" name="loc" value="en_US"/>
+<input type="submit" value="&rarr;" />
+</form></div>
+		</li>            <li>
+               <a href="../feed/index.html" title="RSS feed" target="_blank">RSS/Atom</a><br/>
+               <i>To the feed reader, quick!</i>
+            </li>
+            <li>
+               <a href='https://alpha.app.net/chriskrycho' rel='me' data-type='follow' data-user-id='@chriskrycho' title="app.net/chriskrycho">App.net</a><br/>
+               <i>Less noisy, more characters.</i>
+            </li>
+            <li>
+               <a href="#" class="email-link" title="chris|@|chriskrycho|.|com" target="_blank">Email</a><br/>
+               <i>Send me a letter. But without the paper.</i>
+            </li>
+            <li>
+               <a href="http://www.facebook.com/chriskrycho" title="facebook.com/chriskrycho" target="_blank">Facebook</a><br/>
+               <i>Fun party meets family get-together.</i>
+            </li>
+            <li>
+               <a href="https://plus.google.com/100517719789069874571/" title="Google+ profile" target="_blank">Google+</a><br/>
+               <i>The nerdy new kid on the block.</i>
+            </li>
+            <li>
+               <a href="http://www.goodreads.com/user/show/3165223-chris-krycho" title="Goodreads profile" target="_blank">Goodreads</a><br/>
+               <i>A bookshelf, in cyberspace!</i>
+            </li>
+            <li>
+               <a href="http://www.linkedin.com/in/chriskrycho" title="LinkedIn Profile" target="_blank">LinkedIn</a><br/>
+               <i>A place for professional professionals.</i>
+            </li>
+            <li>
+               <a href="http://nosegue.tumblr.com/">No Segue</a><br/>
+               <i>A Tumblr about technology</i>
+            </li>
+            <li>
+               <a href="http://www.twitter.com/chriskrycho" title="twitter.com/chriskrycho" target="_blank">Twitter</a><br/>
+               <i>Your spastic journalist neighbors.</i>
+            </li>
+            <li>
+               <a href="http://about.me/chriskrycho" title="About.me profile" target="_blank">About.me</a><br/>
+               <i>Biographical sundries & links galore!</i>
+            </li>
+            <li>
+               <a href="http://www.runningahead.com/logs/2667b469aeda433382cbcc8ed413d964/profile" target="_blank">RunningAhead</a><br/>
+               <i>I run and run and run some more.</i>
+            </li>
+         </ul>
+      </section>
+
+      <section id="read" class="footer-block">
+         <h1>Read</h1>
+         <div class="eg-archives-columns"><ul>	<li><a href='../2013/12/index.html'>December 2013</a></li>
+	<li><a href='../2013/10/index.html'>October 2013</a></li>
+	<li><a href='../2013/09/index.html'>September 2013</a></li>
+	<li><a href='../2013/08/index.html'>August 2013</a></li>
+	<li><a href='../2013/06/index.html'>June 2013</a></li>
+	<li><a href='../2013/05/index.html'>May 2013</a></li>
+	<li><a href='../2013/03/index.html'>March 2013</a></li>
+	<li><a href='../2013/02/index.html'>February 2013</a></li>
+	<li><a href='../2013/01/index.html'>January 2013</a></li>
+	<li><a href='../2012/12/index.html'>December 2012</a></li>
+	<li><a href='../2012/11/index.html'>November 2012</a></li>
+</ul><ul>
+	<li><a href='../2012/10/index.html'>October 2012</a></li>
+	<li><a href='../2012/09/index.html'>September 2012</a></li>
+	<li><a href='../2012/08/index.html'>August 2012</a></li>
+	<li><a href='../2012/07/index.html'>July 2012</a></li>
+	<li><a href='../2012/06/index.html'>June 2012</a></li>
+	<li><a href='../2012/05/index.html'>May 2012</a></li>
+	<li><a href='../2012/04/index.html'>April 2012</a></li>
+	<li><a href='../2012/03/index.html'>March 2012</a></li>
+	<li><a href='../2012/02/index.html'>February 2012</a></li>
+	<li><a href='../2012/01/index.html'>January 2012</a></li></ul></div>      </section>
+
+      <section id="discuss" class="footer-block">
+         <h1>Discuss</h1>
+         <h2></h2><ul><li><a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html#comment-16469">Josh, another bit of follow-up. As noted in my prev...</a> &ndash; Chris Krycho <i>on <a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html">Python—homebrew, virtualenv, and OS X Framework builds</a></i></li><li><a href="../modular-scales-fantastic-but-dont-overdo-it/index.html#comment-15318">z6305
+
+c17217
+
+R10941
+</a> &ndash; VedqueltWeree <i>on <a href="../modular-scales-fantastic-but-dont-overdo-it/index.html">Modular scales: fantastic, but don't overdo it</a></i></li><li><a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html#comment-15073">My pleasure. However, fair warning: I just discover...</a> &ndash; Chris Krycho <i>on <a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html">Python—homebrew, virtualenv, and OS X Framework builds</a></i></li><li><a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html#comment-14916">Thank you.  This was a source of much frustration.
+...</a> &ndash; Josh Baylin <i>on <a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html">Python—homebrew, virtualenv, and OS X Framework builds</a></i></li><li><a href="../jira-confluence-intranets-and-windows-firewall/index.html#comment-11602">Thank you so much for this awesome post! I've been ...</a> &ndash; Henrik Olsen <i>on <a href="../jira-confluence-intranets-and-windows-firewall/index.html">JIRA, Confluence, Intranets and Windows Firewall</a></i></li></ul>      </section>
+
+      <section id="colophon" class="colophon footer-block">
+         <h1>Colophon</h1>
+         <p>
+            &copy;2012&ndash;2014 Chris Krycho         </p>
+               </section>
+   </footer>
+   <!-- MathJax Latex Plugin installed: Disabled as no shortcodes on this page --><script src="http://bible.logos.com/jsapi/Referencetagging.js" type="text/javascript"></script>
+<script type="text/javascript">
+			Logos.ReferenceTagging.lbsBibleVersion = "";
+			Logos.ReferenceTagging.lbsLibronixBibleVersion = "";
+									Logos.ReferenceTagging.lbsLibronixLinkIcon = "";
+			Logos.ReferenceTagging.lbsNoSearchClassNames = [ "commentlist" ];			Logos.ReferenceTagging.lbsUseTooltip = false;			Logos.ReferenceTagging.lbsNoSearchTagNames = [  ];
+															Logos.ReferenceTagging.tag();
+		</script>
+   <script src='https://d2zh9g63fcvyrq.cloudfront.net/adn.js'></script>
+</body>
+
+<!-- Mirrored from chriskrycho.com/web/responsive-design-server-side-feature-detection-and-a-big-mess/?replytocom=51 by HTTrack Website Copier/3.x [XR&CO'2013], Wed, 01 Jan 2014 03:24:00 GMT -->
+</html>

@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en-US" class="no-wp-admin">
+
+<!-- Mirrored from chriskrycho.com/web/posts/ by HTTrack Website Copier/3.x [XR&CO'2013], Wed, 01 Jan 2014 02:58:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+   <title>
+      Posts &raquo; Designgineering &raquo; Chris Krycho   </title>
+
+   <!-- Set document meta -->
+   <meta charset="UTF-8" />
+
+   <!-- Mobile devices should view the screen at their native width -->
+   <meta name='viewport' content='width=device-width,initial-scale=1.0' />
+
+   <!-- Styles -->
+   <link rel="stylesheet" type="text/css" media="screen" href="../wp-content/themes/ck-web/style.css" />
+   <link rel="stylesheet" type="text/css" media="screen" href="../../utilities/tooltip/jquery.tooltip.css"
+
+   <!-- Authorship -->
+   <link rel="author" href="https://plus.google.com/u/0/100517719789069874571/" />
+   
+   <!-- All Javascript (including JQuery) functionality -->
+   <script type="text/javascript" src="http://use.typekit.com/aqh6miw.js"></script>
+
+   <!-- jQuery -->
+   <script type="text/javascript" src="../../utilities/jquery.min.js"></script>
+   <script type="text/javascript" src="../../utilities/tooltip/jquery.tooltip.min.js"></script>
+   <script type="text/javascript" src="../../utilities/custom-functions.js"></script>
+
+   <!-- IE Fixes -->
+   <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <link rel="stylesheet" type="text/css" media="screen" href="/styles/ie.css" />
+   <![endif]-->
+   
+   
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.22 - http://yoast.com/wordpress/seo/ -->
+<link rel="canonical" href="index.html" />
+<link rel="next" href="page/2/index.html" />
+<!-- / Yoast WordPress SEO plugin. -->
+
+
+            <script type="text/javascript">//<![CDATA[
+            // Google Analytics for WordPress by Yoast v4.3.3 | http://yoast.com/wordpress/google-analytics/
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-10702079-9']);
+				            _gaq.push(['_trackPageview']);
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+            //]]></script>
+			<link rel="alternate" type="application/rss+xml" title="Designgineering &raquo; Posts Category Feed" href="feed/index.html" />
+<link rel='stylesheet' id='wp-syntax-css-css'  href='../wp-content/plugins/wp-syntax/css/wp-syntax5152.css?ver=1.0' type='text/css' media='all' />
+<meta name="generator" content="WordPress 3.9-alpha" />
+<script type="text/javascript" src="../wp-content/plugins/wp-syntax-effects/js/wp-syntax-effects.js"></script>
+</head>
+<body>
+<div id="decorative-wrapper">
+
+
+   <!--[if lt IE 9]>
+   <div id="nav-wrapper">
+   <![endif]-->
+   
+   <nav id="site-nav" class="menu-main-nav-container"><ul id="menu-main-nav" class="menu"><li id="menu-item-12" class="level-1 menu-item menu-item-type-post_type menu-item-object-page menu-item-12"><a href="../work/index.html" >Work</a></li>
+<li id="menu-item-219" class="level-1 menu-item menu-item-type-post_type menu-item-object-page menu-item-219"><a href="../tools/index.html" >Tools</a></li>
+<li id="menu-item-858" class="level-1 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-858"><a href="../projects/index.html" >Projects</a></li>
+<li id="menu-item-11" class="level-1 hide menu-item menu-item-type-post_type menu-item-object-page menu-item-11"><a href="../process/index.html" >Process</a></li>
+<li id="menu-item-10" class="level-1 menu-item menu-item-type-post_type menu-item-object-page menu-item-10"><a href="../web-professionals/index.html" >Web Professionals</a></li>
+</ul></nav>   
+   <!--[if lt IE 9]>
+   </div>
+   <![endif]-->
+
+   <header id="site-header">
+      <h1><a href="../index.html">Designgineering</a></h1>
+      <h2><span class="italic">web design &amp; development <span class="break">by <a href='../../index.html'>Chris Krycho</a></span></span></h2>
+   </header>
+   
+         
+      <div id="content-header">Filed under: &ldquo;Posts&rdquo;</div>         <article>
+
+            <header>
+               <h1>
+                  <a href="../floating-point-math-hard/index.html">Floating Point Math is Hard (i)</a>               </h1>
+            </header>
+
+                        <div class="content-meta">
+
+                              <p class="pubdate">Published: <a href="../floating-point-math-hard/index.html" class="permalink">December 6, 2013</a></p>
+
+                              <p class="comments">Comments: <a href="../floating-point-math-hard/index.html#comments" class="permalink">0</a></p>
+
+                              <p class="categories">Filed under: <a href="index.html" title="View all posts in Posts" rel="category tag">Posts</a></p>
+
+                              <p class="tags">Topics: <a href="../topics/development/index.html" rel="tag">development</a>, <a href="../topics/floating-point-math/index.html" rel="tag">floating-point math</a>, <a href="../topics/order-of-operations/index.html" rel="tag">order of operations</a>, <a href="../topics/programming/index.html" rel="tag">programming</a>, <a href="../topics/python/index.html" rel="tag">Python</a></p>
+                           </div>
+            
+                        <div class="content hyphenate">
+
+               <p>I&#8217;m working a piece of legacy software, and in performing a code review came
+across what appeared to be some extraneous parentheses. I&#8217;ve renamed the terms
+as generically as possible because my employer would prefer it that way, but we
+have a calculation that in its original form looks like this, where every term
+is a floating point value:</p>
+
+<pre><code>calculated_value = a * (b * (c * d + e * f)) + g
+</code></pre>
+
+<p>Since multiplication is associative, the outermost set of parentheses <em>should</em>
+be redundant. Thinking that would be the case, a coworker and I rewrote the
+calculation so:</p>
+
+<pre><code>calculated_value = a * b * (c * d + e * f) + g
+</code></pre>
+
+<p>This does <em>not</em> always return the same results, though. I have tested this on
+both 2.7.4 and 3.3.1, and for a certain set of values, these two forms of the
+calculation definitely return different results. Here is a small, complete
+program that produces different results between the two forms of the calculation
+on both 2.7.4 and 3.3.1:</p>
+
+<pre><code># test.py
+def with_parens(a, b, c, d, e, f, g):
+    return (a * (b * (c * d + e * f)) + g)
+
+def without_parens(a, b, c, d, e, f, g):
+    return (a * b * (c * d + e * f) + g)
+
+the_values = (1.1523070658790489, 1.7320508075688772, 0.14068856789641426, 0.5950026782638391, 0.028734293347820326, 21.523030539704976, 2.282302370324546)
+
+result_with = with_parens(*the_values)
+result_without = without_parens(*the_values)
+print((result_with == result_without), result_with, result_without)
+</code></pre>
+
+The results:
+
+<pre><code>» python test.py
+(False, 3.68370978406535, 3.6837097840653494)
+
+» python3 test.py
+False 3.68370978406535 3.6837097840653494
+</code></pre>
+
+<p>It is fairly obvious that there is a precision difference here. I am familiar
+with the ways that floating point math can be odd, but I would not expect the
+loss of associativity to be one of them. And of course, it isn&#8217;t. It just took me
+this long in writing up what was originally going to be a post on
+<a href="https://groups.google.com/forum/#!newtopic/comp.lang.python" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://groups.google.com']);">comp.lang.python</a> to see it.</p>
+
+<p>What is actually going on here is that Python respects order of operations (as
+well it should!), and floating point math is imprecise. In the first case,
+<code>a * b * (&lt;everything else&gt;)</code>, the <em>first</em> thing that happens is <code>a</code> is
+multiplied by <code>b</code> and the result is then multiplied by everything else. In the 
+second case, <code>a * (b * &lt;everything else&gt;)</code>, <code>b</code> is multiplied by everything else
+and the result is multiplied by <code>a</code> at the end. Many times, this doesn&#8217;t matter,
+but sometimes there is a slight difference in the results because of the loss of
+precision when performing floating point operations.</p>
+
+<p>Lesson learned (<em>again</em>): floating point math is hard, and will trick you. What
+happens here is <em>functionally</em> a loss of the <a href="http://en.wikipedia.org/wiki/Associative_property" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://en.wikipedia.org']);">associative property</a> of
+multiplication. The two calculations are in a pure mathematical sense equivalent.
+But floating point math is not the same as pure math. Not even close.</p>
+
+            </div>
+
+            
+         </article>         <article>
+
+            <header>
+               <h1>
+                  <a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html">Python—homebrew, virtualenv, and OS X Framework builds</a>               </h1>
+            </header>
+
+                        <div class="content-meta">
+
+                              <p class="pubdate">Published: <a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html" class="permalink">October 11, 2013</a></p>
+
+                              <p class="comments">Comments: <a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html#comments" class="permalink">6</a></p>
+
+                              <p class="categories">Filed under: <a href="index.html" title="View all posts in Posts" rel="category tag">Posts</a></p>
+
+                           </div>
+            
+                        <div class="content hyphenate">
+
+               <p>A few weeks ago, I accidentally clobbered my Python 3 installation on OS&nbsp;X. I had gotten pretty much everything set up again&#8212;or so I thought. To my chagrin, as I got working on a GUI development project this afternoon, I ended up working on getting Python virtual environments to play nicely with OS&nbsp;X&#8217;s special Framework version of Python. (The fact that I&#8217;m using the homebrew version of Python complicates things even more.)</p>
+<p>Moreover, this is not specific to wxPython: the same issues will crop up with <em>any</em> GUI development setup using Python. Since this was an inordinately painful process, and one I&#8217;ve gone through before, I resolved to write up what I did to get it working, so that I can avoid going through this painful process of exploration, Googling, and face-palming in the future.</p>
+<p>Gladly, the solution is pretty simple, albeit a little ugly.</p>
+<p>I already had <a href="https://bitbucket.org/dhellmann/virtualenvwrapper" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://bitbucket.org']);">virtualenvwrapper</a> installed, but if you don&#8217;t, you can install it easily enough. (Note: use your <em>primary</em> system Python&#8212;the one you execute by typing <code>python</code> and nothing else. Things get confused and messy with <code>virtualenv</code> and <code>virtualenvwrapper</code> if you don&#8217;t.)</p>
+<pre><code>$ pip install virtualenvwrapper
+$ source /usr/local/bin/virtualenvwrapper.sh
+</code></pre>
+<p>To install Python 3, I ran the following command, using <a href="http://brew.sh/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://brew.sh']);">Homebrew</a> to get a <a href="http://stackoverflow.com/q/1444543" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://stackoverflow.com']);">Framework</a> build of Python 3 on my system:</p>
+<pre><code>$ brew install python3 --framework
+</code></pre>
+<p>Note that the command to install a Python 2 framework is the <em>same</em> other than the name of the brew (<code>python</code> versus <code>python3</code>).</p>
+<p>Once you have virtualenvwrapper and a Framework Python installed, you can go ahead and create a virtual environment to use:</p>
+<pre><code>$ mkvirtualenv -p /usr/local/bin/python3 my_virtual_env
+</code></pre>
+<p>Now things get a little funky. For reasons that are not yet entirely clear to me, the <code>virtualenv</code> tool (around which <code>virtualenvwrapper</code> and its corresponding <code>mkvirtualenv</code> call wrap) creates a non-Framework version of Python, even when you give it the path to a Framework Python.<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> This is, to say the least, frustrating. However, there is a workaround: simply copy the executable you want to use over the one created in the virtual environment.</p>
+<p>You may want to make a backup of the original first&#8212;I did.</p>
+<pre><code>$ cp ~/.virtualenvs/my_virtual_env/python3.3 ~/.virtual_envs/my_virtual_env/python3.3-backup
+$ cp /usr/local/bin/python3 ~/.virtualenvs/my_virtual_env/bin
+</code></pre>
+<p>That should do the trick. Obviously you&#8217;ll still need to install wxPython (or whatever else) in the correct site packages directory. In my case, that simply involved one more step:</p>
+<pre><code>$ cp -r ~/Downloads/wx/* ~/.virtualenvs/my_virtual_env/lib/python3.3/site-packages
+</code></pre>
+<h2>Summary</h2>
+<p>To summarize, here is the full installation process on OS X:</p>
+<ol>
+<li>Install virtualenvwrapper if you don&#8217;t already have it
+<pre><code>$ pip install virtualenvwrapper
+$ source /usr/local/bin/virtualenvwrapper.sh
+</code></pre>
+</li>
+<li>Install a Framework version of Python(3)
+<pre><code>$ brew install python3 --framework
+</code></pre>
+</li>
+<li>Create and then fix the virtual environment:
+<pre><code>$ mkvirtualenv -p /usr/local/bin/python3.3 my_virtual_env
+$ cp ~/.virtualenvs/my_virtual_env/python3.3 ~/.virtual_envs/my_virtual_env/python3.3-backup
+$ cp /usr/local/bin/python3 ~/.virtualenvs/my_virtual_env/bin
+</code></pre>
+</li>
+</ol>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn:1">
+I&#8217;m hoping to spend some time in November seeing if I can figure out why <code>virtualenv</code> does not create the right kind of Python executable. If I get that figured out, I will (1) post my findings here and (2) see if I can&#8217;t get a patch in to remove this pain point for others in the future.&#160;<a href="#fnref:1" rev="footnote">&#8617;</a>
+</li>
+</ol>
+</div>
+
+            </div>
+
+            
+         </article>         <article>
+
+            <header>
+               <h1>
+                  <a href="../itunes-radio-gamechanger/index.html">iTunes Radio is a Gamechanger</a>               </h1>
+            </header>
+
+                        <div class="content-meta">
+
+                              <p class="pubdate">Published: <a href="../itunes-radio-gamechanger/index.html" class="permalink">September 30, 2013</a></p>
+
+                              <p class="comments">Comments: <a href="../itunes-radio-gamechanger/index.html#comments" class="permalink">0</a></p>
+
+                              <p class="categories">Filed under: <a href="index.html" title="View all posts in Posts" rel="category tag">Posts</a></p>
+
+                              <p class="tags">Topics: <a href="../topics/itunes/index.html" rel="tag">iTunes</a>, <a href="../topics/music/index.html" rel="tag">music</a></p>
+                           </div>
+            
+                        <div class="content hyphenate">
+
+               <p>One of the new features Apple launched with iOS7 was iTunes Radio, available not only to iPhone and iPad users but also to anyone who uses iTunes on Windows or OS X. While the service got some attention back when it was announced alongside iOS7 early in the summer, it has received surprisingly little focus since then.</p>
+<p>Surprisingly, I say, because I&#8217;ve been using it every day since it went public a week and a half ago, and it is without question the single best internet radio I&#8217;ve ever used. Not &#8220;tying with Pandora&#8221;, not &#8220;a little better than Rdio&#8221;, but head-and-shoulders above anything else in the field. Ten days and a few conversations with friends and acquaintances along, I&#8217;m convinced the service is a gamechanger for the music industry&#8212;and possibly a very good one.</p>
+<h2>It works</h2>
+<p>The number one reason I think iTunes Radio is going to change the game is because it just <em>works</em>. I have lots of friends who have had good luck with Pandora over the years, and a fair number of acquaintances who swear by Spotify for finding new music. Neither of them has ever worked for me at all. Part of this is my taste in music, which runs toward neoclassical and film scores&#8212;two areas in which all previous internet radio services&#8217; libraries have simply been shallow (and here I&#8217;m being generous). though Another part is that the algorithms have simply failed me: even in more mainstream music, it&#8217;s always been a hit and miss experience, with the services often surfacing things that really didn&#8217;t match the other music at all.</p>
+<p>iTunes, by contrast, has not only provided quite a bit of good listening among artists and music I already knew I liked, but has also provided me with <em>new</em> selections I hadn&#8217;t heard before, but loved. No exaggeration: I have discovered more new music that I want to buy and add to my library in the last ten days via iTunes Radio than in a year of Spotify use or a half decade on Pandora. Moreover, this experience has been repeated on stations ranging from contemporary classical to one built on Mumford &amp; Sons. The stations, with the tuning inputs I have supplied, have consistently surfaced music that was actually what I was looking for, and introduced me to artists I had not yet heard but really enjoyed.</p>
+<p>iTunes Radio just <em>works</em> in a way that other services haven&#8217;t for me. Friends and acquaintances with whom I have discussed it have had exactly the same experience. I am not sure what Apple is doing for their algorithm&#8212;<a href="http://stephencarradini.com/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://stephencarradini.com']);">one friend</a> suggests they might be using groups that have toured together&#8212;but it is working, and working well. Add in the ability to tune a station to switch between &#8220;Hits&#8221;, &#8220;Variety&#8221;, and &#8220;Discovery&#8221;, and iTunes Radio is just fantastic.</p>
+<p>So the first half of the equation is the consumer-facing side of things: as it stands, I think iTunes Radio is the best service of its kind out there.<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+<h2>Purchasability</h2>
+<p>The other half of the equation is the impact iTunes Radio may have on musicians. The last decade has been an interesting time for the music industry: innovation in means of distribution has been enormous, and the number of artists putting music into the public space has exploded. However, the result has been that the bottom has fallen out of the industry. Top performers still make boatloads of money; everyone else is scrambling to find their feet.</p>
+<p>Pandora and Spotify pay artists notoriously low rates&#8212;a point that artists have made time and again, and which I will therefore not belabor. Airplay on terrestrial radio may be an order of magnitude harder to come by, but it pays at least that much better, too. In any case, it&#8217;s beyond dispute at this point that for all but the biggest acts, Spotify will be an irrelevant source of revenue.<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> To date, streaming services have been at best a way of getting ears on sounds, in the hope that those ears turn into purchasing&#8212;but they rarely do. Why buy, when you can listen endlessly?</p>
+<p>As such, music producers&#8212;whether labels or individual artists&#8212;have always struggled with streaming options. They may provide exposure, but they rarely provide the income necessary to keep making more music. Pandora and others have offered options to purchase music one likes, but it has always been a little kludgy. Here, again, iTunes has it nailed.</p>
+<p>Purchasing a song I like in iTunes Radio is <em>one click</em>. Adding it to a wish list to buy later, or showing the item in the iTunes Store, is <em>two</em> clicks. All the friction is gone. This is great for music consumers: it makes owning music we like trivial and immediate. This in turn means that it is also great for music producers: the chance that someone actually buys music they heard streaming goes up enormously when it is this easy.<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> Purchasability&#8212;conversion, in marketing terms&#8212;has always been the missing element in streaming solutions, and the reasons artists have been so suspicious. Here, it&#8217;s front and center, simple and straightforward, and attractive. Like that artist? Buy her stuff, <em>right now</em>.</p>
+<h2>Conclusion: Gamechanger</h2>
+<p>So there you have it. iTunes Radio, although it has largely been overlooked by tech media in the last few weeks, is a gamechanger. In fact, it may be the biggest gamechanger in music we&#8217;ve seen in the last few years, because unlike the myriad other streaming services we&#8217;ve seen, it actually offers the promise of revenue to artists, while providing real value to consumers. I expect that the next few months will see iTunes Radio become increasingly popular as word of mouth spreads that it is just plain <em>better</em> than the alternatives. I also expect that as a result, people will starting buying more music again. That&#8217;s a net benefit to everyone. (And if somebody can come out and compete with Apple on both terms, more power to them: that, too, will benefit everyone.)</p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn:1">
+Worth note that iTunes Radio isn&#8217;t directly competing with Spotify, which offers streaming of arbitrary music as its main selling point. It <em>is</em> competing directly with Pandora, and with the much-hyped discovery elements of both Rdio and Spotify.&#160;<a href="#fnref:1" rev="footnote">&#8617;</a>
+</li>
+<li id="fn:2">
+I ran the numbers a while back on an artist whose music I had given <em>thousands</em> of plays. Said artist made more when I bought one two-disc album for about $18 than from all those thousands of plays combined.&#160;<a href="#fnref:2" rev="footnote">&#8617;</a>
+</li>
+<li id="fn:3">
+All of this seems like an obvious way to use the iTunes platform&#8212;so much so that tech observers have been calling for it for some time. This in turn raises the question of why it has taken so long, especially given that the labels have been willing to make deals with platforms like Spotify or Google Play which presumably make them much less money. If I had to make a guess, it would be that the labels disliked being beholded to the <em>de facto</em> monopoly iTunes created in the 2000s, and had no interest in repeating that scenario.</p>
+<p>At some point, however, the promise of actual revenue from streaming overwhelmed this hesitation, and the labels finally made a deal that was to Apple&#8217;s satisfaction. Barring something surprising happening, and assuming artists recognize the value this offers them, I expect that the labels will once again find themselves in Apple&#8217;s pocket&#8212;and they know it. That&#8217;s a better outcome than going broke, though, and they know that, too.&#160;<a href="#fnref:3" rev="footnote">&#8617;</a>
+</li>
+</ol>
+</div>
+
+            </div>
+
+            
+         </article>         <article>
+
+            <header>
+               <h1>
+                  <a href="../great-deglobalization/index.html">The Great Deglobalization</a>               </h1>
+            </header>
+
+                        <div class="content-meta">
+
+                              <p class="pubdate">Published: <a href="../great-deglobalization/index.html" class="permalink">August 31, 2013</a></p>
+
+                              <p class="comments">Comments: <a href="../great-deglobalization/index.html#comments" class="permalink">2</a></p>
+
+                              <p class="categories">Filed under: <a href="index.html" title="View all posts in Posts" rel="category tag">Posts</a></p>
+
+                              <p class="tags">Topics: <a href="../topics/decorators/index.html" rel="tag">decorators</a>, <a href="../topics/global-variables/index.html" rel="tag">global variables</a>, <a href="../topics/metaprogramming/index.html" rel="tag">metaprogramming</a>, <a href="../topics/python/index.html" rel="tag">Python</a>, <a href="../topics/refactoring/index.html" rel="tag">refactoring</a></p>
+                           </div>
+            
+                        <div class="content hyphenate">
+
+               <p>For nearly all of August, I have been helping a colleague work on a massive code refactoring project. The company I am consulting for relies on a decades-old (though quite robust) piece of engineering modeling software. The software was written in FORTRAN77 in the mid-to-late 1980s, as was common for such packages at the time. It is apparent that it was <em>not</em> written by competent software developers, however: the entire code-base smacks of fastest-way-to-get-it-to-work thinking. All of the code&#8212;all 4,000+ lines of it&#8212;came in a single file. Every variable in the program is global.<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+<p>Yes, you read that right. <em>Every variable in the program is global.</em></p>
+<p>Since no one at the company is an expert in Fortran at this point&#8212;even a modern dialect like Fortran 95<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>&#8212;we have been translating the whole thing to Python in order to start re-working pieces of it. (We&#8217;re using Python because that&#8217;s the company&#8217;s standard; we&#8217;re reworking this piece of code for reasons long and uninteresting.) The formal translation step was completed in mid-July; since then we have been working on refactoring the project so that we can actually <em>change</em> things without breaking everything.</p>
+<p>The trick, of course, is all those global variables. In order to be able to begin making any other changes, we have to eliminate the global state. Otherwise, a change in one module can (and often does) have unexpected effects elsewhere.</p>
+<p>Our strategy has been simple: take things in small steps, albeit often very <em>time-consuming</em> small steps. In each of those steps we have aimed to make single, incremental change that makes things more explicit and safer. Often, this has simply meant passing and returning inordinate numbers of variables back and forth to functions, simply so that the behavior is explicit (not to say clear). At other times, this has meant doing <em>very bad things</em> that would be intolerable under any other circumstances, but were less bad than what we had before and allowed us to step forward toward our ultimate goals. The prime example&#8212;and one of which I&#8217;m fairly proud, though I hope never to have to use it again&#8212;is leveraging Python&#8217;s property decorators to allow us to begin using struct-like objects for passing around large amounts of data before all the global state involved in said structs was eliminated.</p>
+<p>Basically, we created a stopgap wrapper that made struct access result in changing global state. That way, functions could receive the struct and act on it, with the global state invisible to them: from any function&#8217;s perspective, it is performing perfectly normal access/mutation operations on the class fields. Behind the scenes, we manipulated global state, until we were able to eliminate global dependencies for that variable entirely, at which point we replaced the quirky behavior with standard field initialization.</p>
+<p>Here is the <em>awful</em> pattern my colleague and I used as part of that transition, followed by some explanation. (Do not attempt at home!)</p>
+<pre><code>class BasicallyAStruct():
+    def __init__(self, some_field):
+        global some_field_
+        some_field_ = some_field
+
+    @property
+    def some_field(self):
+        return some_field_
+
+    @some_field.setter
+    def some_field(self, value):
+        global some_field_
+        some_field = value
+</code></pre>
+<p>Here&#8217;s how it works. For starters, we renamed every global variable to end in an underscore (like <code>some_field_</code>) to make it easy to distinguish between global and local variables. Then, we created a class that is basically just a struct to hold data. (It can of course be expanded to be a full-up class with methods later if that makes sense.) In the constructor, we declare every global variable that the struct needs to reference, and then assign it the value passed to the constructor. Then we use Python&#8217;s property decorators to specify the access and mutation behavior: instead of storing the value to a class property like normal, calling the setter or getter<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> actually returns or sets the value in the global variable. The result:</p>
+<pre><code>global some_field_  # set to some old value
+my_struct = BasicallyAStruct(some_field_)  # create the struct
+
+# Set
+my_struct.some_field = new_value  # assign just like normal
+print(some_field_)  # new_value
+
+# Get
+print(new_value == my_struct.some_field)  # True
+</code></pre>
+<p>Once we get to a point where we&#8217;ve completely eliminated the global state, we change the class definition to look like a normal class definition, completely removing the <code>global</code> declaration and the <code>@property</code> and <code>@some_field.setter</code> decorators:</p>
+<pre><code>class BasicallyAStruct():
+    def __init__(self, some_field):
+        self.some_field = some_field
+</code></pre>
+<p>From the functions using the struct, nothing has changed; they are already using standard class property access notation.</p>
+<p>It has worked like a charm, and it demonstrates the power of decorators in a bit of an unusual situation. It is, of course, an <em>awful</em> use of decorators, to the extent that I would call it an abuse in general. If I ever found this in &#8220;final&#8221; code I would probably make a horrible noise in outrage; it&#8217;s a stupid thing to do. It is, however, <em>less</em> stupid than keeping everything global, and it made for a good intermediate solution that allowed us to minimize changes at each step along the way and therefore minimized the potential number of places anything could break as we refactored.<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup></p>
+<p>I&#8217;m happy to say that almost all of those global variables are gone, and the classes are all looking pretty much like normal classes now. And the calling functions never even noticed.</p>
+<p>I&#8217;m incredibly happy with how that came out&#8212;and I hope never to do anything like it again.</p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn:1">
+Experienced FORTRAN programmers will recognize the pattern: all the variables are declared in a common block at the top of every single function, except for a couple subroutines.&#160;<a href="#fnref:1" rev="footnote">&#8617;</a>
+</li>
+<li id="fn:2">
+A fun piece of trivia: my first software development project was all Fortran 95. Fortran was what the physics professor who helped a bunch of students get their projects off the ground knew, so Fortran is where I started. A bit strangely, that background has ended up being valuable to two of my three employers so far.&#160;<a href="#fnref:2" rev="footnote">&#8617;</a>
+</li>
+<li id="fn:3">
+Behind the scenes, Python&#8217;s property access always calls getter and setter methods&#8212;which is why you can override them as we are here. It&#8217;s a nifty bit of metaprogramming capability the language gives you.&#160;<a href="#fnref:3" rev="footnote">&#8617;</a>
+</li>
+<li id="fn:4">
+This is actually a pretty good example of the principle of information hiding put to a non-standard use.&#160;<a href="#fnref:4" rev="footnote">&#8617;</a>
+</li>
+</ol>
+</div>
+
+            </div>
+
+            
+         </article>         <article>
+
+            <header>
+               <h1>
+                  <a href="../stop-being-a-product/index.html">Stop Being a Product</a>               </h1>
+            </header>
+
+                        <div class="content-meta">
+
+                              <p class="pubdate">Published: <a href="../stop-being-a-product/index.html" class="permalink">August 14, 2013</a></p>
+
+                              <p class="comments">Comments: <a href="../stop-being-a-product/index.html#comments" class="permalink">0</a></p>
+
+                              <p class="categories">Filed under: <a href="index.html" title="View all posts in Posts" rel="category tag">Posts</a></p>
+
+                              <p class="tags">Topics: <a href="../topics/advertising/index.html" rel="tag">advertising</a>, <a href="../topics/app-net/index.html" rel="tag">App.net</a>, <a href="../topics/payment/index.html" rel="tag">payment</a>, <a href="../topics/piracy/index.html" rel="tag">piracy</a></p>
+                           </div>
+            
+                        <div class="content hyphenate">
+
+               <p><em>Or, Reflections Prompted by the One-Year Anniversary of App.net</em></p>
+<p>Yesterday, App.net turned a year old. Most of my friends in &#8220;real life&#8221; have never even heard of the social network/platform,<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> so the anniversary rightly went by unnoticed and unheralded. For me, however, the day that App.net went live last year was the start of a sea change in the way I approach the software I use &#8212; a sea change that is still in progress in many ways. What changed? I decided I wanted to <a href="../the-little-things-why-im-done-with-android/index.html">stop being a product</a> and start being a customer.</p>
+<p>It&#8217;s worth reading the <a href="http://daltoncaldwell.com/an-audacious-proposal" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://daltoncaldwell.com']);">original proposal</a> for App.net: a social networking service, for which at least some users <em>pay</em>. This was incredibly audacious for a social networking backbone (though, as App.net founder Dalton Caldwell noted, not <em>completely</em> unheard of in internet services: GitHub, Dropbox, and a number of others offer the same model). Twitter was making it clear that they were following Google and Facebook&#8217;s models of selling customer info to advertisers, leaving developers and users of the ecosystem to the whims of whatever made the most sense for sales teams. Facebook&#8217;s monetization plans were becoming increasingly annoying (ads in my News Feed? No, that really isn&#8217;t why I&#8217;m here&#8230;). Google&#8217;s data-mining was well known but increasingly starting to bother me. All of these had a common thread: they were free to use, on the premise that we don&#8217;t mind being advertised to constantly and our data being sold to and analyzed by advertising companies. More and more, though, I <em>did</em> mind. The idea that I would pay for access to a social networking backbone would have seemed crazy at some point; no more.</p>
+<p>The web was born and bred on free. In many ways, that has been a good thing. The democratizing effects of free access are well-documented, and people&#8217;s ability to publish and read such a wide array of information has been a great boon to the causes of education and liberty. On the other hand, those trends have engendered an expectation that everything digital <em>ought</em> to be free, and this expectation has had a great many deleterious effects as well. We have seen mass piracy of music and video, cutthroat rates (often consisting of &#8220;exposure&#8221;) for writing, and a flood of terrible content that always threatens to overwhelm the good content available. On balance, I think the web has been a good thing&#8212;but it has not been an unalloyed good, and in the last few years an increasing number of people have become dissatisfied with the status quo.</p>
+<p>People deserve to be paid for their work, and at some point we have to figure out how to make that happen. Ads have proven insufficient to generate the revenue needed for sustainable business, but they have also incentivized content-providers to aim at generating the most hits, rather than providing the best content. This is not a new problem; the same issue drove a lot of the &#8220;yellow journalism&#8221; of the last century. The difference is that, coupled with the new, massive data and the disconnecting nature of the web (you don&#8217;t read a single &#8220;paper&#8221; anymore, you read a bunch of articles from various places all over the web), advertisizers have had both the means and the motive to pursue practices that are increasingly proven corrosive to privacy and, in the long run, contrary to the best interests of the public.</p>
+<p>The way out&#8212;and the way that an increasing number of voices have embraced, including those behind App.net&#8212;is to go back to paying for things. (Shocking, I know!) With App.net, Dropbox, GitHub, and many other web services, users pay for access to premium functionality. App.net does not sell my data to anyone; they sell the engineering backbone as a service to <em>me</em>, as well as to developers who want to use that backbone to create their own services. Likewise, Dropbox doesn&#8217;t sell my data, they sell storage. GitHub doesn&#8217;t sell my data, they sell version control hosting.</p>
+<p>I <em>love</em> this idea. So much so that I&#8217;m increasingly pulling out of ad-supported services where I&#8217;m the product instead of the customer, and moving toward things I pay for. It makes sure the service&#8217;s incentives are aligned with my best interests as a user, rather than orthogonally and possibly detrimentally to my desires. Not least, it makes sure the people building the service I&#8217;m using get paid. Those are good things. It costs more, to be sure, but that helps me think through what to use (and what to skip) more carefully, and that&#8217;s a good thing, too.<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup></p>
+<p>Now, if we only someone could figure out a good way to do the same thing with music, writing, and video&#8230;</p>
+<p>Oh, and App.net? It&#8217;s the single best social network I&#8217;ve ever used&#8212;the quality of conversations I&#8217;ve had there is far, far better than that I&#8217;ve had anywhere else. You should <a href="join.app.net/from/gjgzrkvyhz.html" title="Join App.net for free">check it out</a>.</p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn:1">
+App.net is, strictly speaking, server infrastructure and an API&#8212;that is, a set of software tools that people can use to build services and the servers to run those services. It allows everything from <a href="https://alpha.app.net/global" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://alpha.app.net']);">Twitter-like</a> conversation streams to <a href="http://ohaiapp.net/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://ohaiapp.net']);">personal journaling apps</a> to <a href="http://patter-app.net/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://patter-app.net']);">chat rooms</a> or <a href="http://informalprotocol.com/2013/03/project-amy/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://informalprotocol.com']);">clients</a> to <a href="http://files-app.net/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://files-app.net']);">file storage</a> to <a href="http://photo-app.net/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://photo-app.net']);">photo sharing</a>. It is not just a social network; it is a way to <em>build</em> social networks. Curious? You can <a href="join.app.net/from/gjgzrkvyhz.html" title="Join App.net for free">join for free</a>, and only upgrade to a paid account if it makes sense.&#160;<a href="#fnref:1" rev="footnote">&#8617;</a>
+</li>
+<li id="fn:2">
+Most of these services have free tiers, but&#8212;importantly&#8212;those free tiers are subsidized by the paying customers, not by ad sales.&#160;<a href="#fnref:2" rev="footnote">&#8617;</a>
+</li>
+</ol>
+</div>
+
+            </div>
+
+            
+         </article>         <article>
+
+            <header>
+               <h1>
+                  <a href="../the-little-things-why-im-done-with-android/index.html">The Little Things: Why I&#8217;m Done With Android</a>               </h1>
+            </header>
+
+                        <div class="content-meta">
+
+                              <p class="pubdate">Published: <a href="../the-little-things-why-im-done-with-android/index.html" class="permalink">June 24, 2013</a></p>
+
+                              <p class="comments">Comments: <a href="../the-little-things-why-im-done-with-android/index.html#comments" class="permalink">11</a></p>
+
+                              <p class="categories">Filed under: <a href="index.html" title="View all posts in Posts" rel="category tag">Posts</a></p>
+
+                              <p class="tags">Topics: <a href="../topics/android/index.html" rel="tag">Android</a>, <a href="../topics/apple/index.html" rel="tag">Apple</a>, <a href="../topics/bugs/index.html" rel="tag">bugs</a>, <a href="../topics/delight/index.html" rel="tag">delight</a>, <a href="../topics/design/index.html" rel="tag">design</a>, <a href="../topics/google/index.html" rel="tag">Google</a>, <a href="../topics/ios/index.html" rel="tag">iOS</a>, <a href="../topics/iphone/index.html" rel="tag">iPhone</a>, <a href="../topics/polytonic-greek/index.html" rel="tag">polytonic Greek</a></p>
+                           </div>
+            
+                        <div class="content hyphenate">
+
+               <p>We were at the doctor&#8217;s office for a checkup on our little girl late last week, and I have a Greek class coming up &#8211; a tough class for which I figured I&#8217;d spend some time studying and preparing while waiting for the doctor. Unfortunately, I just discovered yet another of the thousand little details Google doesn&#8217;t think matter. I can&#8217;t study Greek on my phone here because Google refuses to ship (or allow users to install) a typeface that includes the polytonic Greek character set on Android. The default system font, Roboto (a poor clone of Helvetica), has accents but no breathing marks. This means that at least half the words in classical and Koine Greek are simply missing letters on any web page, and for that matter any app that doesn&#8217;t embed its own fonts.</p>
+<p>This is not a make or break issue with the phone, but as my primary tool for mobile work in situations like this, it is quite frustrating. What is more frustrating is Google&#8217;s absolute unresponsiveness about this. There are many ways the issue could be fixed, none of them particularly complex or time-consuming (unless the folks working on android have made some really silly decisions and coupled the font deeply in the OS, which I don&#8217;t believe for a second). No, by all appearances the explanation for the still-open ticket is quite simple: <em>Google doesn&#8217;t care</em>.  <a href="../the-little-things-why-im-done-with-android/index.html"  class="more-link">Read on, intrepid explorer &rarr;</a></p>
+
+            </div>
+
+            
+         </article>         <article>
+
+            <header>
+               <h1>
+                  <a href="../os-x-a-few-much-needed-improvements/index.html">OS X: A Few Much-Needed Improvements</a>               </h1>
+            </header>
+
+                        <div class="content-meta">
+
+                              <p class="pubdate">Published: <a href="../os-x-a-few-much-needed-improvements/index.html" class="permalink">June 23, 2013</a></p>
+
+                              <p class="comments">Comments: <a href="../os-x-a-few-much-needed-improvements/index.html#comments" class="permalink">0</a></p>
+
+                              <p class="categories">Filed under: <a href="index.html" title="View all posts in Posts" rel="category tag">Posts</a></p>
+
+                           </div>
+            
+                        <div class="content hyphenate">
+
+               <p>A good friend of mine has been making the transition to Mac from Windows recently, and the experience has highlighted a couple of things that Apple really ought to do different and better with OS X:</p>
+<ol>
+<li>Turn the Dashboard off by default.</li>
+<li>Provide information about app installation and uninstallation.</li>
+</ol>
+<p> <a href="../os-x-a-few-much-needed-improvements/index.html"  class="more-link">Read on, intrepid explorer &rarr;</a></p>
+
+            </div>
+
+            
+         </article>            <nav id="page-nav">
+         <ul>
+            <li class="newer">
+                           </li>
+            <li class="home"><a href="../index.html">&ndash;Home&ndash;</a></li>
+            <li class="older">
+               <a href="page/2/index.html" >into the past &rarr;</a>            </li>
+         </ul>
+      </nav>
+         </div>      <footer id="site-footer">
+
+            <nav id="supersite-nav" class="footer-block">
+         <h1>Navigate</h1>
+         <ul>
+            <li>
+               <h2>Search this site:</h2>
+               
+<form role="search" class="customform" method="get" action="http://chriskrycho.com/web/">
+   <input type="text" value="" name="search" id="search" placeholder="discover something"/>
+   <input type="submit" id="searchsubmit" value="&rarr;" />
+</form>            </li>
+            <li>
+               <a href="../../index.html">Home</a><br/>
+               <i>Creativity, reflection, & passionate endeavors.</i>
+            </li>
+            <li>
+               <a href="../index.html">Designgineering</a><br/>
+               <i>Web design & development.</i>
+            </li>
+            <li>
+               <a href="../../theology/index.html">Ardent Fidelity</a><br/>
+               <i>Reflections on a Christ-centered life.</i>
+            </li>
+            <li>
+               <a href="../../art/index.html">Ars Artis</a><br/>
+               <i>Creations & musings on creativity.</i>
+            </li>
+            <li>
+               <a href="../../family/index.html">From the Hearth</a><br/>
+               <i>Updates on our growing family.</i>
+            </li>
+         </ul>
+      </nav>
+
+      <section id="connect" class="footer-block">
+         <h1>Connect</h1>
+         <ul>
+            <li><h2>Opt for emails:</h2>			<div class="textwidget"><form class="customform" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=chriskrycho/web', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+<input type="text" name="email" placeholder="your.name@domain.com"/>
+<input type="hidden" value="chriskrycho/web" name="uri"/>
+<input type="hidden" name="loc" value="en_US"/>
+<input type="submit" value="&rarr;" />
+</form></div>
+		</li>            <li>
+               <a href="../feed/index.html" title="RSS feed" target="_blank">RSS/Atom</a><br/>
+               <i>To the feed reader, quick!</i>
+            </li>
+            <li>
+               <a href='https://alpha.app.net/chriskrycho' rel='me' data-type='follow' data-user-id='@chriskrycho' title="app.net/chriskrycho">App.net</a><br/>
+               <i>Less noisy, more characters.</i>
+            </li>
+            <li>
+               <a href="#" class="email-link" title="chris|@|chriskrycho|.|com" target="_blank">Email</a><br/>
+               <i>Send me a letter. But without the paper.</i>
+            </li>
+            <li>
+               <a href="http://www.facebook.com/chriskrycho" title="facebook.com/chriskrycho" target="_blank">Facebook</a><br/>
+               <i>Fun party meets family get-together.</i>
+            </li>
+            <li>
+               <a href="https://plus.google.com/100517719789069874571/" title="Google+ profile" target="_blank">Google+</a><br/>
+               <i>The nerdy new kid on the block.</i>
+            </li>
+            <li>
+               <a href="http://www.goodreads.com/user/show/3165223-chris-krycho" title="Goodreads profile" target="_blank">Goodreads</a><br/>
+               <i>A bookshelf, in cyberspace!</i>
+            </li>
+            <li>
+               <a href="http://www.linkedin.com/in/chriskrycho" title="LinkedIn Profile" target="_blank">LinkedIn</a><br/>
+               <i>A place for professional professionals.</i>
+            </li>
+            <li>
+               <a href="http://nosegue.tumblr.com/">No Segue</a><br/>
+               <i>A Tumblr about technology</i>
+            </li>
+            <li>
+               <a href="http://www.twitter.com/chriskrycho" title="twitter.com/chriskrycho" target="_blank">Twitter</a><br/>
+               <i>Your spastic journalist neighbors.</i>
+            </li>
+            <li>
+               <a href="http://about.me/chriskrycho" title="About.me profile" target="_blank">About.me</a><br/>
+               <i>Biographical sundries & links galore!</i>
+            </li>
+            <li>
+               <a href="http://www.runningahead.com/logs/2667b469aeda433382cbcc8ed413d964/profile" target="_blank">RunningAhead</a><br/>
+               <i>I run and run and run some more.</i>
+            </li>
+         </ul>
+      </section>
+
+      <section id="read" class="footer-block">
+         <h1>Read</h1>
+         <div class="eg-archives-columns"><ul>	<li><a href='../2013/12/index.html'>December 2013</a></li>
+	<li><a href='../2013/10/index.html'>October 2013</a></li>
+	<li><a href='../2013/09/index.html'>September 2013</a></li>
+	<li><a href='../2013/08/index.html'>August 2013</a></li>
+	<li><a href='../2013/06/index.html'>June 2013</a></li>
+	<li><a href='../2013/05/index.html'>May 2013</a></li>
+	<li><a href='../2013/03/index.html'>March 2013</a></li>
+	<li><a href='../2013/02/index.html'>February 2013</a></li>
+	<li><a href='../2013/01/index.html'>January 2013</a></li>
+	<li><a href='../2012/12/index.html'>December 2012</a></li>
+	<li><a href='../2012/11/index.html'>November 2012</a></li>
+</ul><ul>
+	<li><a href='../2012/10/index.html'>October 2012</a></li>
+	<li><a href='../2012/09/index.html'>September 2012</a></li>
+	<li><a href='../2012/08/index.html'>August 2012</a></li>
+	<li><a href='../2012/07/index.html'>July 2012</a></li>
+	<li><a href='../2012/06/index.html'>June 2012</a></li>
+	<li><a href='../2012/05/index.html'>May 2012</a></li>
+	<li><a href='../2012/04/index.html'>April 2012</a></li>
+	<li><a href='../2012/03/index.html'>March 2012</a></li>
+	<li><a href='../2012/02/index.html'>February 2012</a></li>
+	<li><a href='../2012/01/index.html'>January 2012</a></li></ul></div>      </section>
+
+      <section id="discuss" class="footer-block">
+         <h1>Discuss</h1>
+         <h2></h2><ul><li><a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html#comment-16469">Josh, another bit of follow-up. As noted in my prev...</a> &ndash; Chris Krycho <i>on <a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html">Python—homebrew, virtualenv, and OS X Framework builds</a></i></li><li><a href="../modular-scales-fantastic-but-dont-overdo-it/index.html#comment-15318">z6305
+
+c17217
+
+R10941
+</a> &ndash; VedqueltWeree <i>on <a href="../modular-scales-fantastic-but-dont-overdo-it/index.html">Modular scales: fantastic, but don't overdo it</a></i></li><li><a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html#comment-15073">My pleasure. However, fair warning: I just discover...</a> &ndash; Chris Krycho <i>on <a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html">Python—homebrew, virtualenv, and OS X Framework builds</a></i></li><li><a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html#comment-14916">Thank you.  This was a source of much frustration.
+...</a> &ndash; Josh Baylin <i>on <a href="../python-homebrew-virtualenv-os-x-framework-builds/index.html">Python—homebrew, virtualenv, and OS X Framework builds</a></i></li><li><a href="../jira-confluence-intranets-and-windows-firewall/index.html#comment-11602">Thank you so much for this awesome post! I've been ...</a> &ndash; Henrik Olsen <i>on <a href="../jira-confluence-intranets-and-windows-firewall/index.html">JIRA, Confluence, Intranets and Windows Firewall</a></i></li></ul>      </section>
+
+      <section id="colophon" class="colophon footer-block">
+         <h1>Colophon</h1>
+         <p>
+            &copy;2012&ndash;2014 Chris Krycho         </p>
+               </section>
+   </footer>
+   <!-- MathJax Latex Plugin installed: Disabled as no shortcodes on this page --><script src="http://bible.logos.com/jsapi/Referencetagging.js" type="text/javascript"></script>
+<script type="text/javascript">
+			Logos.ReferenceTagging.lbsBibleVersion = "";
+			Logos.ReferenceTagging.lbsLibronixBibleVersion = "";
+									Logos.ReferenceTagging.lbsLibronixLinkIcon = "";
+			Logos.ReferenceTagging.lbsNoSearchClassNames = [ "commentlist" ];			Logos.ReferenceTagging.lbsUseTooltip = false;			Logos.ReferenceTagging.lbsNoSearchTagNames = [  ];
+															Logos.ReferenceTagging.tag();
+		</script>
+   <script src='https://d2zh9g63fcvyrq.cloudfront.net/adn.js'></script>
+</body>
+
+<!-- Mirrored from chriskrycho.com/web/posts/ by HTTrack Website Copier/3.x [XR&CO'2013], Wed, 01 Jan 2014 02:58:06 GMT -->
+</html>

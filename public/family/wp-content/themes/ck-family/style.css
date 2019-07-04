@@ -1,0 +1,94 @@
+/*
+Theme Name: From the Hearth (chriskrycho.com)
+Description: Child theme of chriskrycho.com
+Author: Chris Krycho
+Template: chriskrycho.com
+*/
+
+
+@import url("../chriskrycho.com/style.css");
+@import url("../chriskrycho.com/colors/terra.css");
+
+@font-face{
+    font-family: voluta-script-pro;
+    src:url("../chriskrycho.com/fonts/cfb6352e-d563-4c37-bc56-a33589cbffc0d41d.eot?#iefix");
+    src:url("../chriskrycho.com/fonts/cfb6352e-d563-4c37-bc56-a33589cbffc0d41d.eot?#iefix") format("eot"),url("../chriskrycho.com/fonts/cada7311-b5a3-4b5f-94c0-55872a1eaf22.woff") format("woff"),url("../chriskrycho.com/fonts/dcb3ec27-db5e-461d-a1d0-659a753f8291.ttf") format("truetype"),url("../chriskrycho.com/fonts/520521c5-5355-432e-a64d-8d501556bb24.svg#520521c5-5355-432e-a64d-8d501556bb24") format("svg");
+}
+
+
+/* ----- Override fonts ----- */
+header h1 {
+   font-family: voluta-script-pro;
+   font-size: 3.588em;
+   line-height: 1;
+   margin-top: 0em;
+   margin-bottom: -0.1em;
+}
+
+#site-header h1 {
+   font-size: 4.783em;
+   margin-bottom: -0.134em;
+}
+
+.image .content-meta h2 {
+   font-family: voluta-script-pro;
+   font-size: 3.588em;
+}
+
+body, #site-header, #site-footer h2 {
+   font-family: 'Century Gothic', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+   body, #site-footer h2 {
+      font-family: cronos-pro, 'Century Gothic', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+   }
+
+   #site-header h2 {
+      font-weight: 300;
+   }
+
+   #site-footer {
+      font-family: 'Minion Pro', minion-pro, Garamond, Times, serif;
+   }
+
+/* ----- Embedded image style ----- */
+figure {
+   box-shadow: 0 0 1em black;
+   padding: 0.48em;
+   font-size: 0.853em;
+   color: #033649;
+   background: #E8DDCB url('../images/noise-medium.html') repeat top left;;
+}
+
+/* */
+@media (min-width: 535px) {
+
+}
+
+/* */
+@media (max-width: 535px) {
+
+   article h1 {
+      margin-bottom: 0.238em;
+   }
+
+}
+
+/* */
+@media (max-width: 950px) {
+
+   article {
+      margin-top: 1.515em;
+   }
+
+}
+
+@media (min-width: 1440px) {
+   article header h1 {
+      font-size: 4.209rem;
+   }
+
+   #site-header h1 {
+      font-size: 5.61rem;
+   }
+}
